@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="À propos de moi — Samy Hanifi">
+  <title>Samy Hanifi — À propos de moi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profil">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__mark"></span>
+        <span class="logo__name" data-profile="name">Samy Hanifi</span>
+      </a>
+      <nav class="nav" id="siteNav" aria-label="Navigation principale"></nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__top">
+      <span data-profile="name">Samy Hanifi</span>
+      <button class="mobile-menu__close" id="menuClose" aria-label="Fermer">&times;</button>
+    </div>
+    <nav class="mobile-menu__nav" id="mobileNav" aria-label="Menu mobile"></nav>
+  </div>
+
+  <main class="page-profil">
+    <section class="page-hero page-hero--sub">
+      <div class="container">
+        <a href="index.html" class="page-back">← Retour à l'accueil</a>
+        <p class="section__eyebrow">À propos de moi</p>
+        <h1 class="page-hero__title">À propos de moi</h1>
+        <p class="page-hero__desc">Parcours · Compétences · Certifications · CV</p>
+      </div>
+    </section>
+
+    <div class="profil-subnav">
+      <div class="container">
+        <nav class="profil-subnav__inner" aria-label="Sections à propos de moi">
+          <a href="#parcours" class="profil-subnav__link"><span class="profil-icon profil-icon--sm" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg></span>Parcours</a>
+          <a href="#competences" class="profil-subnav__link"><span class="profil-icon profil-icon--sm" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>Compétences</a>
+          <a href="#certifications" class="profil-subnav__link"><span class="profil-icon profil-icon--sm" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span>Certifications</a>
+          <a href="#cv" class="profil-subnav__link"><span class="profil-icon profil-icon--sm" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>CV</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section profil-section" id="parcours">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg></span>
+          <div><p class="profil-section__subtitle">Parcours</p><h2 class="section__title">Mon parcours</h2></div>
+        </div>
+        <div class="profil-content">
+          <p>
+            Mon parcours s'articule entre l'Algérie et la France, avec une formation scientifique initiale
+            puis une orientation progressive vers l'informatique et les infrastructures réseau.
+          </p>
+          <ul class="timeline">
+            <li class="timeline__item timeline__item--highlight">
+              <span class="timeline__date">2025 – 2027</span>
+              <div>
+                <h3>BTS SIO — option SISR</h3>
+                <p>ENSITECH, Marseille. Formation en Solutions d'Infrastructure, Systèmes et Réseaux : administration des systèmes, réseaux et sécurité.</p>
+                <span class="timeline__tag">En cours</span>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__date">2024 – 2025</span>
+              <div>
+                <h3>Licence Informatique — Portail René Descartes</h3>
+                <p>Aix-Marseille Université. Première année commune aux mentions Informatique, Mathématiques, Mécanique et Physique. Réorientation vers le BTS SIO afin de me spécialiser en administration des systèmes et des réseaux.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__date">2023</span>
+              <div>
+                <h3>Baccalauréat général — candidat libre</h3>
+                <p>Lycée International Alexandre-Dumas (LIAD), Alger — établissement de l'AEFE, rattaché à l'académie d'Aix-Marseille. Spécialités Mathématiques et Physique-Chimie.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__date">2020 – 2023</span>
+              <div>
+                <h3>Licence Génie des Procédés</h3>
+                <p>USTHB, Alger — Faculté de Génie Mécanique et Génie des Procédés. Formation en chimie physique, opérations unitaires et phénomènes de transfert.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__date">2019 – 2020</span>
+              <div>
+                <h3>Baccalauréat — série Sciences, spécialité Mathématiques</h3>
+                <p>Algérie. Diplôme d'accès à l'enseignement supérieur.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profil-section profil-section--alt" id="competences">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+          <div><p class="profil-section__subtitle">Compétences</p><h2 class="section__title">Mes compétences</h2></div>
+        </div>
+        <div class="profil-content">
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-card__icon anim-icon" aria-hidden="true">🌐</div>
+              <h3>Réseaux</h3>
+              <p>Adressage IP, VLAN, routage statique, configuration de switches Cisco et interconnexion.</p>
+              <div class="skill-card__bar"><span style="--level: 75%"></span></div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card__icon anim-icon" aria-hidden="true">🖥️</div>
+              <h3>Systèmes</h3>
+              <p>Windows Server, Active Directory, GPO, services réseau et administration de postes.</p>
+              <div class="skill-card__bar"><span style="--level: 70%"></span></div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card__icon anim-icon" aria-hidden="true">🛡️</div>
+              <h3>Sécurité</h3>
+              <p>Filtrage réseau, segmentation, gestion des accès et bonnes pratiques de sécurisation.</p>
+              <div class="skill-card__bar"><span style="--level: 60%"></span></div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card__icon anim-icon" aria-hidden="true">📊</div>
+              <h3>Supervision</h3>
+              <p>Inventaire et suivi du parc avec GLPI et Zabbix, documentation technique.</p>
+              <div class="skill-card__bar"><span style="--level: 65%"></span></div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card__icon anim-icon" aria-hidden="true">🐧</div>
+              <h3>Linux</h3>
+              <p>Administration de base, services réseau, ligne de commande et gestion des droits.</p>
+              <div class="skill-card__bar"><span style="--level: 55%"></span></div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card__icon anim-icon" aria-hidden="true">🤝</div>
+              <h3>Transversal</h3>
+              <p>Travail en équipe, communication technique, rigueur et sens du service utilisateur.</p>
+              <div class="skill-card__bar"><span style="--level: 80%"></span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profil-section" id="certifications">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span>
+          <div><p class="profil-section__subtitle">Certifications</p><h2 class="section__title">Mes certifications</h2></div>
+        </div>
+        <div class="profil-content">
+          <div class="cert-list">
+            <article class="cert-card cert-card--animated">
+              <div class="cert-card__ring">
+                <span class="profil-icon profil-icon--lg anim-icon--pulse" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span>
+              </div>
+              <div>
+                <h3>Cisco CCNA — Introduction to Networks</h3>
+                <p class="cert-card__org">Cisco Networking Academy — Module 1 (CCNA v7)</p>
+                <p class="cert-card__date">Premier module validé</p>
+                <p style="margin-top:8px;font-size:0.9rem;color:var(--text-muted)">Fondamentaux des réseaux : modèle OSI/TCP-IP, adressage IPv4/IPv6, commutation et routage de base.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profil-section profil-section--alt" id="cv">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+          <div><p class="profil-section__subtitle">CV</p><h2 class="section__title">Curriculum vitæ</h2></div>
+        </div>
+        <div class="profil-content">
+          <div class="cv-box">
+            <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+            <div>
+              <h3>CV — Samy Hanifi</h3>
+              <p>Format PDF · BTS SIO SISR</p>
+            </div>
+            <a href="assets/cv-samy-hanifi.pdf" class="btn btn--primary" download>Télécharger le CV</a>
+          </div>
+          <p class="cv-note">Place ton fichier PDF dans <code>assets/cv-samy-hanifi.pdf</code> pour activer le téléchargement.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profil-nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veille technologique et juridique — Samy Hanifi">
+  <title>Samy Hanifi — Veille</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="veille">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__mark"></span>
+        <span class="logo__name" data-profile="name">Samy Hanifi</span>
+      </a>
+      <nav class="nav" id="siteNav" aria-label="Navigation principale"></nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__top">
+      <span data-profile="name">Samy Hanifi</span>
+      <button class="mobile-menu__close" id="menuClose" aria-label="Fermer">&times;</button>
+    </div>
+    <nav class="mobile-menu__nav" id="mobileNav" aria-label="Menu mobile"></nav>
+  </div>
+
+  <main>
+    <section class="page-hero page-hero--sub page-hero--visual">
+      <div class="container page-hero__wrap">
+        <div class="page-hero__content">
+          <a href="index.html" class="page-back">← Retour à l'accueil</a>
+          <p class="section__eyebrow">Veille</p>
+          <h1 class="page-hero__title">Veille</h1>
+          <p class="page-hero__desc">Veille technologique et juridique — sujets suivis en première année de BTS SIO SISR.</p>
+        </div>
+        <div class="page-hero__media">
+          <div class="hero__image-frame page-hero__image-frame">
+            <img src="assets/images/veille.jpg" alt="Veille technologique et juridique" class="hero__image" width="520" height="360">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="profil-subnav">
+      <div class="container">
+        <nav class="profil-subnav__inner" aria-label="Sections veille">
+          <a href="#veille-tech" class="profil-subnav__link"><span class="profil-icon profil-icon--sm" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>Veille technologique</a>
+          <a href="#veille-juridique" class="profil-subnav__link"><span class="profil-icon profil-icon--sm" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Veille juridique</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section veille-block" id="veille-tech">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+          <div>
+            <p class="profil-section__subtitle">Veille technologique</p>
+            <h2 class="section__title">Windows Server</h2>
+          </div>
+        </div>
+
+        <p class="veille-intro">
+          En première année de BTS SIO SISR, Windows Server constitue un socle central : Active Directory,
+          services réseau (DNS, DHCP), stratégies de groupe et correctifs de sécurité. Je suis l'évolution
+          de ces technologies pour préparer mes TP et mon futur stage.
+        </p>
+
+        <div class="veille-detail">
+          <div class="veille-detail__content">
+            <h3>Points suivis</h3>
+            <ul>
+              <li>Évolution de Windows Server et des rôles d'infrastructure (AD, DNS, DHCP).</li>
+              <li>Déploiement et gestion des stratégies de groupe (GPO).</li>
+              <li>Planification des mises à jour de sécurité (Patch Tuesday).</li>
+              <li>Bonnes pratiques d'administration en environnement d'entreprise.</li>
+            </ul>
+
+            <h3>Intérêt pour le profil SISR</h3>
+            <p>
+              La majorité des PME s'appuient sur Windows Server. La maîtrise d'Active Directory et des GPO
+              est attendue d'un technicien en administration des systèmes et des réseaux.
+            </p>
+
+            <div class="veille-resources">
+              <a href="https://learn.microsoft.com/fr-fr/windows-server/" target="_blank" rel="noopener noreferrer">Microsoft Learn — Windows Server</a>
+              <a href="https://www.youtube.com/@MSFTMechanics" target="_blank" rel="noopener noreferrer">Microsoft Mechanics (YouTube)</a>
+              <a href="https://www.youtube.com/watch?v=OH9a0cBvyxM" target="_blank" rel="noopener noreferrer">Vidéo — Installation AD (YouTube)</a>
+            </div>
+          </div>
+
+          <div class="veille-video">
+            <a href="https://www.youtube.com/watch?v=OH9a0cBvyxM" target="_blank" rel="noopener noreferrer" class="video-placeholder-link" style="display:block; position:relative; width:100%; height:100%; min-height:250px; background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://img.youtube.com/vi/OH9a0cBvyxM/0.jpg') center/cover; border-radius:8px; overflow:hidden;">
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:64px; height:64px; background:rgba(255,0,0,0.95); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:24px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">▶</div>
+              <span style="position:absolute; bottom:12px; left:12px; color:#fff; font-size:12px; font-weight:600; background:rgba(0,0,0,0.75); padding:6px 10px; border-radius:4px; font-family:sans-serif;">Regarder sur YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section veille-block veille-block--alt" id="veille-juridique" style="background:var(--bg-elevated)">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <div>
+            <p class="profil-section__subtitle">Veille juridique</p>
+            <h2 class="section__title">RGPD &amp; protection des données</h2>
+          </div>
+        </div>
+
+        <p class="veille-intro">
+          Le Règlement Général sur la Protection des Données (RGPD) encadre le traitement des données personnelles
+          au sein des organisations européennes. En tant qu'étudiant SISR, je m'intéresse aux obligations légales
+          et aux mesures techniques associées : droits des personnes, sécurisation des accès et traçabilité.
+        </p>
+
+        <div class="veille-detail">
+          <div class="veille-detail__content">
+            <h3>Notions essentielles</h3>
+            <ul>
+              <li><strong>Donnée personnelle</strong> — toute information permettant d'identifier une personne physique.</li>
+              <li><strong>Responsable de traitement</strong> — l'organisme qui définit les finalités du traitement.</li>
+              <li><strong>Sous-traitant</strong> — l'entité qui traite les données pour le compte du responsable.</li>
+              <li><strong>Droits des personnes</strong> — accès, rectification, effacement et portabilité des données.</li>
+              <li><strong>Mesures techniques</strong> — contrôle d'accès, chiffrement, journalisation et sauvegardes.</li>
+            </ul>
+
+            <h3>Lien avec le métier SISR</h3>
+            <p>
+              L'administrateur systèmes intervient sur les droits d'accès (Active Directory), la journalisation,
+              les sauvegardes et la sécurisation des partages. Une mauvaise configuration peut exposer l'organisation
+              à un risque de non-conformité au RGPD.
+            </p>
+
+            <div class="veille-resources">
+              <a href="https://www.cnil.fr/fr/comprendre-le-rgpd" target="_blank" rel="noopener noreferrer">CNIL — Comprendre le RGPD</a>
+              <a href="https://www.cnil.fr/fr/les-notions-cle-du-rgpd" target="_blank" rel="noopener noreferrer">CNIL — Notions clés</a>
+              <a href="https://atelier-rgpd.cnil.fr/" target="_blank" rel="noopener noreferrer">Atelier RGPD (MOOC gratuit)</a>
+              <a href="https://www.youtube.com/watch?v=7NKEBWOcgZE" target="_blank" rel="noopener noreferrer">Vidéo CNIL — L'Esprit Sorcier</a>
+            </div>
+          </div>
+
+          <div class="veille-video">
+            <a href="https://www.youtube.com/watch?v=7NKEBWOcgZE" target="_blank" rel="noopener noreferrer" class="video-placeholder-link" style="display:block; position:relative; width:100%; height:100%; min-height:250px; background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://img.youtube.com/vi/7NKEBWOcgZE/0.jpg') center/cover; border-radius:8px; overflow:hidden;">
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:64px; height:64px; background:rgba(255,0,0,0.95); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:24px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">▶</div>
+              <span style="position:absolute; bottom:12px; left:12px; color:#fff; font-size:12px; font-weight:600; background:rgba(0,0,0,0.75); padding:6px 10px; border-radius:4px; font-family:sans-serif;">Regarder sur YouTube</span>
+            </a>
+          </div>
+        </div>
+
+        <article class="veille-card" style="margin-top:32px">
+          <div class="veille-card__header">
+            <span class="veille-card__icon" aria-hidden="true">📋</span>
+            <span class="veille-card__date">Veille en cours · 2025 – 2026</span>
+          </div>
+          <h3>Synthèse personnelle</h3>
+          <p>
+            La veille juridique complète la veille technologique. Lors du déploiement d'outils comme GLPI ou Zabbix,
+            je traite des données relatives au parc et aux utilisateurs : limitation des accès, documentation des traitements
+            et respect du principe de minimisation des données constituent des réflexes à intégrer dès la première année.
+          </p>
+          <div class="veille-card__tags">
+            <span class="veille-card__tag">CNIL</span>
+            <span class="veille-card__tag">Conformité</span>
+            <span class="veille-card__tag">Données personnelles</span>
+            <span class="veille-card__tag">Sécurité SI</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profil-nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

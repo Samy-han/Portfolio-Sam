@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expériences professionnelles — Samy Hanifi">
+  <title>Samy Hanifi — Expériences pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profil">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__mark"></span>
+        <span class="logo__name" data-profile="name">Samy Hanifi</span>
+      </a>
+      <nav class="nav" id="siteNav" aria-label="Navigation principale"></nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__top">
+      <span data-profile="name">Samy Hanifi</span>
+      <button class="mobile-menu__close" id="menuClose" aria-label="Fermer">&times;</button>
+    </div>
+    <nav class="mobile-menu__nav" id="mobileNav" aria-label="Menu mobile"></nav>
+  </div>
+
+  <main class="page-profil">
+    <section class="page-hero page-hero--sub">
+      <div class="container">
+        <a href="index.html" class="page-back">← Retour à l'accueil</a>
+        <p class="section__eyebrow">Expériences professionnelles</p>
+        <h1 class="page-hero__title">Expériences professionnelles</h1>
+        <p class="page-hero__desc">Mon expérience en entreprise</p>
+      </div>
+    </section>
+
+    <div class="profil-subnav">
+      <div class="container">
+        <nav class="profil-subnav__inner" aria-label="Sections expériences pro">
+          <a href="#stages" class="profil-subnav__link profil-subnav__link--active"><span class="profil-icon profil-icon--sm" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Expériences de stages</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section profil-section" id="stages">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>
+          <div><p class="profil-section__subtitle">Expériences de stages</p><h2 class="section__title">Mes stages</h2></div>
+        </div>
+        <div class="profil-content">
+          <div class="stages-list">
+            <article class="stage-card">
+              <span class="profil-icon profil-icon--lg stage-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+              <div class="stage-card__body">
+                <div class="stage-card__header">
+                  <span class="stage-card__badge">Stage 1 — Première année</span>
+                  <span class="stage-card__period">En recherche</span>
+                </div>
+                <h3>Stage de première année</h3>
+                <p class="stage-card__role">BTS SIO SISR — ENSITECH Marseille</p>
+                <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.65;margin-bottom:16px">
+                  Je suis actuellement en recherche d'un stage de 6 à 8 semaines en administration systèmes et réseaux.
+                  Cette page sera mise à jour dès que le stage sera confirmé (entreprise, période et missions).
+                </p>
+                <ul class="stage-card__missions">
+                  <li>Administration Windows Server et Active Directory</li>
+                  <li>Support utilisateurs et gestion du parc</li>
+                  <li>Supervision et documentation technique</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profil-nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
