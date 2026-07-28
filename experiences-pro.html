@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Expériences professionnelles et stage — Samy Hanifi">
-  <title>Samy Hanifi — Expériences pro</title>
+  <meta name="description" content="Expérience professionnelle et stage au CINaM CNRS — Samy Hanifi">
+  <title>Samy Hanifi — Expérience de stage</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -36,51 +36,97 @@
     <section class="page-hero page-hero--sub">
       <div class="container">
         <a href="index.html" class="page-back">← Retour à l'accueil</a>
-        <p class="section__eyebrow">Expériences professionnelles</p>
-        <h1 class="page-hero__title">Expériences professionnelles</h1>
-        <p class="page-hero__desc">Mon stage et mon parcours en entreprise</p>
+        <p class="section__eyebrow">Expérience professionnelle</p>
+        <h1 class="page-hero__title">Stage technicien systèmes et réseaux</h1>
+        <p class="page-hero__desc">Immersion professionnelle au cœur d'un laboratoire de recherche national</p>
       </div>
     </section>
 
     <div class="profil-subnav">
       <div class="container">
         <nav class="profil-subnav__inner" aria-label="Sections expériences pro">
-          <a href="#stages" class="profil-subnav__link profil-subnav__link--active"><span class="profil-icon profil-icon--sm" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Expériences de stages</a>
+          <a href="#stage-cinam" class="profil-subnav__link profil-subnav__link--active">
+            <span class="profil-icon profil-icon--sm" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+            </span>
+            CINaM (CNRS)
+          </a>
         </nav>
       </div>
     </div>
 
-    <section class="section profil-section" id="stages">
+    <!-- Section inspirée de la mise en page épurée et moderne de type Hocine Itrarni -->
+    <section class="section profil-section" id="stage-cinam">
       <div class="container">
-        <div class="profil-section__head">
-          <span class="profil-icon profil-icon--lg" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>
-          <div><p class="profil-section__subtitle">Expériences de stages</p><h2 class="section__title">Mes stages</h2></div>
-        </div>
-        <div class="profil-content">
-          <div class="stages-list">
-            <article class="stage-card">
-              <span class="profil-icon profil-icon--lg stage-card__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
-              <div class="stage-card__body">
-                <div class="stage-card__header">
-                  <span class="stage-card__badge">Stage — 6 semaines</span>
-                  <span class="stage-card__period">22/06/2026 – 03/08/2026</span>
-                </div>
-                <h3>Stagiaire Technicien Systèmes et Réseaux</h3>
-                <p class="stage-card__role">Centre Interdisciplinaire de Nanoscience de Marseille (CINaM) — Campus de Luminy</p>
-                <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.65;margin-bottom:16px">
-                  Immersion au sein du service informatique d'un laboratoire de recherche de premier plan. Participation active à l'administration des infrastructures systèmes, à la sécurisation des accès et à la gestion opérationnelle du parc.
-                </p>
-                <h4 style="font-size:1rem;margin-bottom:8px;color:var(--text-main);">Missions et réalisations :</h4>
-                <ul class="stage-card__missions">
-                  <li><strong>Administration Système & Annuaires :</strong> Gestion de la haute disponibilité Active Directory (failover AD1/AD2), déploiement et maintien des stratégies de groupe (GPO) incluant LAPS pour la sécurisation des mots de passe administrateurs.</li>
-                  <li><strong>Cybersécurité & Accès Distants :</strong> Configuration d'un environnement de travail sécurisé via Guacamole (RDP) et Teleport (SSH), et développement de règles de détection personnalisées sur Wazuh.</li>
-                  <li><strong>Supervision & Support :</strong> Monitoring proactif des services et équipements réseau via Zabbix (création de triggers et dashboards), gestion opérationnelle du parc sous GLPI (tickets, inventaire, déploiement de postes).</li>
-                  <li><strong>Infrastructures Réseaux & Physique :</strong> Interventions terrain (tirage de câbles RJ45/Fibre, brassage de baies, recettage réseau), administration d'équipements (switches, routeurs), configuration, stacking et segmentation Inter-VLAN.</li>
-                </ul>
+        
+        <!-- En-tête de stage style "Fiche d'identité" / Hero de stage -->
+        <div class="stage-hero-box" style="background: var(--bg-card, #ffffff); border: 1px solid var(--border-color, #e2e8f0); border-radius: 16px; padding: 32px; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;">
+            <div style="flex: 1; min-width: 280px;">
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
+                <span class="stage-card__badge" style="background: rgba(37, 99, 235, 0.1); color: var(--primary, #2563eb); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Stage — BTS SIO SISR</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">22/06/2026 – 03/08/2026</span>
               </div>
-            </article>
+              <h2 style="font-size: 1.8rem; margin-bottom: 8px; font-weight: 700; color: var(--text-main);">Centre Interdisciplinaire de Nanoscience de Marseille (CINaM)</h2>
+              <p style="font-size: 1.05rem; color: var(--primary, #2563eb); font-weight: 500; margin-bottom: 16px;">Laboratoire rattaché au CNRS (Centre National de la Recherche Scientifique) · Campus de Luminy</p>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                Réalisation de mon stage de première année de BTS SIO option SISR au sein du service informatique, garantissant le support, la sécurité et la disponibilité des infrastructures techniques du laboratoire.
+              </p>
+            </div>
+
+            <!-- Emplacement dédié pour la photo du centre / logo / illustration -->
+            <div class="stage-photo-container" style="width: 260px; height: 160px; background: var(--bg-secondary, #f8fafc); border: 2px dashed var(--border-color, #cbd5e1); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 16px; flex-shrink: 0;">
+              <!-- Remplace cette balise par <img src="chemin-vers-ta-photo.jpg" alt="CINaM CNRS" style="width:100%; height:100%; object-fit: cover; border-radius: 10px;"> le moment venu -->
+              <span style="font-size: 2rem; margin-bottom: 8px;" aria-hidden="true">🏛️</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Insérer ici la photo du centre ou du campus de Luminy</span>
+            </div>
           </div>
         </div>
+
+        <!-- Missions principales formalisées selon la convention -->
+        <div class="profil-section__head" style="margin-bottom: 24px;">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </span>
+          <div>
+            <p class="profil-section__subtitle">Missions de stage</p>
+            <h3 class="section__title" style="font-size: 1.4rem;">Activités et réalisations techniques</h3>
+          </div>
+        </div>
+
+        <div class="profil-content">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            
+            <!-- Carte Mission 1 -->
+            <div class="skill-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px;">
+              <div style="font-size: 1.8rem; margin-bottom: 12px;" aria-hidden="true">🖥️</div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600;">Gestion du parc informatique</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                Participation active à l'installation, la configuration, la sécurisation et la sauvegarde des postes et des services. Gestion opérationnelle et suivi sous GLPI.
+              </p>
+            </div>
+
+            <!-- Carte Mission 2 -->
+            <div class="skill-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px;">
+              <div style="font-size: 1.8rem; margin-bottom: 12px;" aria-hidden="true">🌐</div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600;">Équipements réseau & Infrastructure</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                Interventions sur les équipements réseau (switches, routeurs, bornes Wi-Fi). Réalisation de câblages structurés en RJ45 et opérations de brassage en baies.
+              </p>
+            </div>
+
+            <!-- Carte Mission 3 -->
+            <div class="skill-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px;">
+              <div style="font-size: 1.8rem; margin-bottom: 12px;" aria-hidden="true">⚙️</div>
+              <h4 style="font-size: 1.1rem; margin-bottom: 8px; font-weight: 600;">Serveurs & Services associés</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                Installation et configuration de serveurs, mise en place de haute disponibilité Active Directory (AD1/AD2), GPO, LAPS et supervision proactive (Zabbix, Wazuh).
+              </p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
@@ -92,3 +138,4 @@
   <script src="js/animations.js"></script>
 </body>
 </html>
+```[cite: 2]
