@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stage au CINaM CNRS — Samy Hanifi">
+  <title>Stage CINaM CNRS — Samy Hanifi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profil">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__mark"></span>
+        <span class="logo__name" data-profile="name">Samy Hanifi</span>
+      </a>
+      <nav class="nav" id="siteNav" aria-label="Navigation principale"></nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__top">
+      <span data-profile="name">Samy Hanifi</span>
+      <button class="mobile-menu__close" id="menuClose" aria-label="Fermer">&times;</button>
+    </div>
+    <nav class="mobile-menu__nav" id="mobileNav" aria-label="Menu mobile"></nav>
+  </div>
+
+  <main class="page-profil">
+    <section class="page-hero page-hero--sub">
+      <div class="container">
+        <a href="stages.html" class="page-back">← Retour aux stages</a>
+        <p class="section__eyebrow">Rapport de stage</p>
+        <h1 class="page-hero__title">Centre Interdisciplinaire de Nanoscience de Marseille</h1>
+        <p class="page-hero__desc">22/06/2026 – 03/08/2026 • Campus de Luminy, Marseille</p>
+      </div>
+    </section>
+
+    <div class="profil-subnav">
+      <div class="container">
+        <nav class="profil-subnav__inner" aria-label="Sections rapport de stage">
+          <a href="#presentation" class="profil-subnav__link profil-subnav__link--active">Présentation</a>
+          <a href="#missions" class="profil-subnav__link">Missions & Réalisations</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section profil-section" id="presentation">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </span>
+          <div>
+            <p class="profil-section__subtitle">Entreprise d'accueil</p>
+            <h2 class="section__title">Présentation du CINaM — CNRS</h2>
+          </div>
+        </div>
+
+        <div class="profil-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; align-items: center;">
+          <div>
+            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+              Stage d'une durée de 6 semaines effectué au sein du service informatique du <strong>Centre Interdisciplinaire de Nanoscience de Marseille (CINaM)</strong>, un laboratoire de recherche de premier plan rattaché au <strong>CNRS</strong>.
+            </p>
+            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+              Situé sur le campus de Luminy à Marseille, le laboratoire regroupe des chercheurs, ingénieurs et techniciens travaillant dans le domaine des nanosciences, nécessitant une infrastructure informatique robuste, hautement sécurisée et performante.
+            </p>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 16px; border-radius: 12px;">
+              <p style="margin: 0; font-size: 0.95rem; font-weight: 600;">📍 Localisation : Campus de Luminy, Marseille</p>
+              <p style="margin: 8px 0 0 0; font-size: 0.95rem; color: var(--text-muted);">⏱️ Période : 22/06/2026 – 03/08/2026</p>
+            </div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; padding: 12px;">
+            <img src="assets/images/image-cinam.png" alt="CINaM CNRS Campus de Luminy" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profil-section" id="missions" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </span>
+          <div>
+            <p class="profil-section__subtitle">Activités techniques</p>
+            <h2 class="section__title">Missions et Infrastructures</h2>
+          </div>
+        </div>
+
+        <div class="profil-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 12px; color: var(--primary);">Administration des Systèmes</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+              Participation active à l'administration des infrastructures serveurs et postes de travail au sein du laboratoire, gestion des comptes utilisateurs et maintenance du parc informatique.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 12px; color: var(--primary);">Réseaux et Sécurisation</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+              Interventions sur le réseau interne, optimisation de la connectivité, configuration des accès et application des protocoles de sécurité requis par l'environnement de recherche du CNRS.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 12px; color: var(--primary);">Support et Maintenance</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+              Assistance technique auprès des chercheurs et du personnel, diagnostic des pannes matérielles et logicielles, et suivi des tickets du service informatique.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profil-nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
