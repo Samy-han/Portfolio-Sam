@@ -4,11 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Projets et procédures — Samy Hanifi">
-  <title>Samy Hanifi — Projets</title>
+  <title>Samy Hanifi — Projets & Réalisations Professionnelles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .rich-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 28px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .rich-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
+      border-color: var(--primary, #2563eb);
+    }
+    .grid-duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .badge-tech {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px;
+      background: var(--bg-secondary); border: 1px solid var(--border-color);
+      border-radius: 20px; font-size: 0.85rem; font-weight: 500; color: var(--text-main);
+      transition: all 0.2s ease; margin: 4px;
+    }
+    .badge-tech:hover { border-color: var(--primary); transform: scale(1.05); }
+    .mission-list-custom { list-style: none; padding: 0; margin: 0; }
+    .mission-item-custom {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 12px 0; border-bottom: 1px solid var(--border-color);
+      color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;
+    }
+    .mission-item-custom:last-child { border-bottom: none; }
+    .mission-icon-bullet {
+      flex-shrink: 0; width: 28px; height: 28px;
+      background: var(--bg-secondary); border: 1px solid var(--border-color);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      color: var(--primary); margin-top: 2px;
+    }
+  </style>
 </head>
 <body data-page="projets">
   <header class="header">
@@ -38,8 +74,8 @@
         <div class="page-hero__content">
           <a href="index.html" class="page-back">← Retour à l'accueil</a>
           <p class="section__eyebrow">Portfolio technique</p>
-          <h1 class="page-hero__title">Projets</h1>
-          <p class="page-hero__desc">Procédures techniques, documentation et projet scolaire E6.</p>
+          <h1 class="page-hero__title">Projets & Réalisations</h1>
+          <p class="page-hero__desc">Procédures techniques, dossier professionnel E5 et projet de fin d'études E6.</p>
         </div>
         <div class="page-hero__media">
           <div class="hero__image-frame page-hero__image-frame">
@@ -51,16 +87,21 @@
 
     <section class="section">
       <div class="container">
+        <!-- BARRE DE NAVIGATION INTERNE DES PROJETS -->
         <nav class="projets-nav" aria-label="Catégories de projets">
           <a href="#procedures" class="projets-nav__link projets-nav__link--active">
             <span aria-hidden="true">📋</span> Procédures
+          </a>
+          <a href="#projet-e5" class="projets-nav__link">
+            <span aria-hidden="true">💼</span> Projet E5 (Stage CINaM)
           </a>
           <a href="#projet-e6" class="projets-nav__link">
             <span aria-hidden="true">🎓</span> Projet E6
           </a>
         </nav>
 
-        <div id="procedures">
+        <!-- SECTION 1 : PROCÉDURES -->
+        <div id="procedures" style="margin-bottom: 60px;">
           <p class="section__eyebrow">Documentation</p>
           <h2 class="section__title">Mes procédures</h2>
           <p class="section__desc">Guides techniques rédigés en TP — chaque procédure est disponible en PDF.</p>
@@ -128,13 +169,13 @@
 
             <article class="proc-card">
               <div class="proc-card__visual">
-                <img src="assets/images/procedures/procedure-exchange.jpg" alt="Capture d'écran — procédure Zabbix" loading="lazy">
+                <img src="assets/images/procedures/procedure-exchange.jpg" alt="Capture d'écran — procédure Microsoft Exchange" loading="lazy">
                 <div class="proc-card__overlay"><span class="proc-card__badge">Supervision</span></div>
               </div>
               <div class="proc-card__body">
                 <span class="proc-card__icon" aria-hidden="true">📊</span>
                 <h3>Procédure Microsoft Exchange</h3>
-                <p>Installation des rôles, configuration des domaines acceptés et création des boîtes aux lettres pour la gestion de la messagerie d'entreprise.</p>
+                <p>Installation des rôles, configuration des domaines acceptés et création des boîtes aux lettres pour la messagerie d'entreprise.</p>
                 <div class="proc-card__actions">
                   <a href="assets/pdf/procedure-Exchange.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF</a>
                 </div>
@@ -142,32 +183,73 @@
             </article>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="projet-e6" style="background:var(--bg-elevated);border-top:1px solid var(--border)">
-      <div class="container">
-        <p class="section__eyebrow">Projet scolaire</p>
-        <h2 class="section__title">Projet E6</h2>
-        <p class="section__desc">Projet de fin de formation réalisé au centre de formation — documentation et livrables techniques.</p>
+        <!-- SECTION 2 : PROJET E5 (TRÈS DÉTAILLÉ - STAGE CINaM CNRS) -->
+        <div id="projet-e5" style="margin-bottom: 60px;">
+          <p class="section__eyebrow">Épreuve Professionnelle • BTS SIO SISR</p>
+          <h2 class="section__title">Projet E5 — Réalisations en Stage (CINaM CNRS)</h2>
+          <p class="section__desc">Synthèse des projets d'infrastructure, de sécurité avancée, de brassage et d'accès distants déployés au sein du laboratoire.</p>
 
-        <article class="e6-card reveal">
-          <div class="e6-card__visual">
-            <img src="assets/images/procedures/projet-e6.webp" alt="Illustration du projet E6" loading="lazy">
+          <div class="rich-card">
+            <div class="grid-duo" style="align-items: center; margin-bottom: 24px;">
+              <div>
+                <span class="e6-card__tag" style="display:inline-block; margin-bottom:12px;">Stage Pratique • Juin - Août 2026</span>
+                <h3 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 12px;">Centre Interdisciplinaire de Nanoscience de Marseille (CINaM CNRS)</h3>
+                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+                  Durant cette période au sein du service informatique, j'ai participé activement à la refonte des infrastructures réseau, à la mise en place de passerelles d'accès distants sécurisées, ainsi qu'au renforcement de la supervision et de la gestion des identités.
+                </p>
+                <div>
+                  <span class="badge-tech">Aruba / HPE (Brassage)</span>
+                  <span class="badge-tech">Teleport & Guacamole</span>
+                  <span class="badge-tech">Keycloak & PrivacyIDEA</span>
+                  <span class="badge-tech">Wazuh (SIEM & Règles Custom)</span>
+                </div>
+              </div>
+              <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px;">
+                <h4 style="font-size: 1rem; margin-bottom: 10px; color: var(--text-main);">Points clés du dossier E5 :</h4>
+                <ul class="mission-list-custom">
+                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Refonte physique des baies de brassage et switches.</span></li>
+                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Déploiement Teleport (SSH) et Apache Guacamole (RDP).</span></li>
+                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Fédération d'identités Keycloak et MFA PrivacyIDEA.</span></li>
+                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Création de règles de détection personnalisées sur Wazuh (1001+).</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div style="text-align: right; border-top: 1px solid var(--border-color); padding-top: 20px;">
+              <a href="mailto:samy.hanifi@ensitech.eu?subject=Demande%20dossier%20E5%20-%20CINaM&amp;body=Bonjour%2C%0A%0AJe%20souhaiterais%20consulter%20votre%20dossier%20professionnel%20E5.%0A%0ACordialement." class="btn btn--primary">
+                <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Obtenir le dossier E5 complet (Contact)
+              </a>
+            </div>
           </div>
-          <div>
-            <span class="e6-card__tag">Épreuve E6 — BTS SIO SISR</span>
-            <h3>Projet de fin d'études</h3>
-            <p style="color:var(--text-muted);margin-bottom:20px;line-height:1.65">
-              Le projet E6 consiste à concevoir et déployer une solution d'infrastructure répondant à un besoin
-              identifié. Documentation, schémas réseau, procédures et présentation orale devant un jury.
-            </p>
-            <a href="mailto:samy.hanifi@ensitech.eu?subject=Demande%20dossier%20projet%20E6&amp;body=Bonjour%2C%0A%0AJe%20souhaiterais%20consulter%20votre%20dossier%20projet%20E6.%0A%0ACordialement." class="btn btn--primary">
-              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Me contacter pour obtenir le dossier
-            </a>
-          </div>
-        </article>
+        </div>
+
+        <!-- SECTION 3 : PROJET E6 -->
+        <div id="projet-e6">
+          <p class="section__eyebrow">Projet scolaire</p>
+          <h2 class="section__title">Projet E6</h2>
+          <p class="section__desc">Projet de fin de formation réalisé au centre de formation — documentation et livrables techniques.</p>
+
+          <article class="e6-card reveal">
+            <div class="e6-card__visual">
+              <img src="assets/images/procedures/projet-e6.webp" alt="Illustration du projet E6" loading="lazy">
+            </div>
+            <div>
+              <span class="e6-card__tag">Épreuve E6 — BTS SIO SISR</span>
+              <h3>Projet de fin d'études</h3>
+              <p style="color:var(--text-muted);margin-bottom:20px;line-height:1.65">
+                Le projet E6 consiste à concevoir et déployer une solution d'infrastructure répondant à un besoin
+                identifié. Documentation, schémas réseau, procédures et présentation orale devant un jury.
+              </p>
+              <a href="mailto:samy.hanifi@ensitech.eu?subject=Demande%20dossier%20projet%20E6&amp;body=Bonjour%2C%0A%0AJe%20souhaiterais%20consulter%20votre%20dossier%20projet%20E6.%0A%0ACordialement." class="btn btn--primary">
+                <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Me contacter pour obtenir le dossier E6
+              </a>
+            </div>
+          </article>
+        </div>
+
       </div>
     </section>
   </main>
