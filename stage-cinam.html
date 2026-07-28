@@ -148,6 +148,77 @@
       border-color: var(--primary);
       transform: scale(1.1);
     }
+
+    /* Style visionneuse / bouton PDF stylisé */
+    .pdf-preview-box {
+      margin-top: 24px;
+      padding: 20px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .pdf-preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .pdf-title-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+    .pdf-title-info svg {
+      color: #ef4444; /* Couleur rouge PDF */
+    }
+    .pdf-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .pdf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .pdf-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    }
+    .pdf-btn:hover svg {
+      stroke: #ffffff;
+    }
+    .pdf-embed-container {
+      width: 100%;
+      height: 450px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .pdf-embed-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   </style>
 </head>
 <body data-page="profil">
@@ -290,7 +361,7 @@
           <!-- CARTE 2 : Réseaux, Sécurité & Support -->
           <div class="stack-card">
             <div class="stack-card-title">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
               Réseaux, Sécurité & Infrastructure
             </div>
             <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.6;">
@@ -323,7 +394,7 @@
       </div>
     </section>
 
-    <!-- SECTION 3 : MISSIONS DÉTAILLÉES (Mise à jour avec la préparation des postes et icônes) -->
+    <!-- SECTION 3 : MISSIONS DÉTAILLÉES (Bilan Complet incluant la préparation des postes et toutes les missions clés) -->
     <section class="section profil-section" id="missions">
       <div class="container">
         <div class="profil-section__head">
@@ -331,100 +402,128 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </span>
           <div>
-            <p class="profil-section__subtitle">Activités opérationnelles</p>
-            <h2 class="section__title">Missions et Tâches Réalisées</h2>
+            <p class="profil-section__subtitle">Activités opérationnelles & Bilans techniques</p>
+            <h2 class="section__title">Missions Détaillées & Réalisations Clés</h2>
           </div>
         </div>
 
-        <!-- CARTE MISSION 1 : Préparation & Déploiement Postes Chercheurs -->
+        <!-- CARTE MISSION 1 : Préparation & Déploiement Postes Chercheurs + PDF Intégré -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            1. Préparation et configuration des ordinateurs pour les chercheurs
+            1. Préparation, configuration et sécurisation des postes pour les chercheurs
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-            Standardisation et durcissement des postes de travail destinés aux équipes de recherche du laboratoire, intégrant les logiciels métiers et la mise en conformité de sécurité.
+            Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement applicatif homogène, conforme aux exigences de sécurité du CNRS et connecté au domaine institutionnel.
           </p>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
               </span>
-              <span>Désinstallation de la suite bureautique pré-installée d'origine sur les machines neuves.</span>
+              <span><strong>Nettoyage système :</strong> Suppression d'office de la suite bureautique pré-installée d'origine sur les machines neuves.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               </span>
-              <span>Déploiement de la version institutionnelle d'Office récupérée depuis le NAS du laboratoire et activation des licences associées.</span>
+              <span><strong>Bureautique institutionnelle :</strong> Déploiement de la version propre d'Office récupérée depuis le NAS du laboratoire et activation rigoureuse des licences.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </span>
-              <span>Installation des navigateurs web et outils de communication : <strong>Mozilla Firefox</strong> et <strong>Mozilla Thunderbird</strong>.</span>
+              <span><strong>Logiciels de communication :</strong> Installation et paramétrage de <strong>Mozilla Firefox</strong> et de la messagerie <strong>Mozilla Thunderbird</strong>.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
               </span>
-              <span>Installation du logiciel scientifique <strong>Origin</strong> et activation de sa clé de licence dédiée.</span>
+              <span><strong>Outil scientifique métier :</strong> Installation du logiciel d'analyse graphique <strong>Origin</strong> et saisie/activation de sa clé de licence dédiée.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               </span>
-              <span>Mise en place du chiffrement <strong>BitLocker</strong> sur les dossiers partagés du NAS et sur la solution <strong>Attempo Lina</strong> (sauvegarde).</span>
+              <span><strong>Chiffrement & Sauvegarde :</strong> Activation de <strong>BitLocker</strong> sur les dossiers sécurisés du NAS et intégration de la solution de sauvegarde <strong>Attempo Lina</strong>.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
               </span>
-              <span>Jonction des postes au domaine Active Directory du laboratoire et installation de l'agent antivirus <strong>WithSecure</strong>.</span>
+              <span><strong>Annuaire & Protection :</strong> Jonction des postes au domaine Active Directory du laboratoire et déploiement de l'agent de cybersécurité <strong>WithSecure</strong>.</span>
             </li>
           </ul>
+
+          <!-- VISIONNEUSE ET BOUTON POUR LE PDF DES CAPTURES D'ÉCRAN -->
+          <div class="pdf-preview-box">
+            <div class="pdf-preview-header">
+              <div class="pdf-title-info">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span>Documentation & Captures d'écran des étapes de préparation (PDF)</span>
+              </div>
+              <div class="pdf-actions">
+                <a href="documents/preparation-postes-cinam.pdf" target="_blank" class="pdf-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Ouvrir en grand
+                </a>
+              </div>
+            </div>
+            <!-- Visionneuse intégrée (Embed) -->
+            <div class="pdf-embed-container">
+              <iframe src="documents/preparation-postes-cinam.pdf#toolbar=0" title="Captures d'écran préparation des postes">
+                <p>Votre navigateur ne supporte pas l'affichage direct des PDF. Vous pouvez <a href="documents/preparation-postes-cinam.pdf" target="_blank">télécharger le PDF ici</a>.</p>
+              </iframe>
+            </div>
+          </div>
         </div>
 
-        <!-- CARTE MISSION 2 : Helpdesk GLPI -->
+        <!-- CARTE MISSION 2 : Support technique et gestion des incidents (Helpdesk GLPI) -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            2. Support technique et gestion des incidents (Helpdesk)
+            2. Support technique et résolution d'incidents (Helpdesk)
           </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+            Gestion quotidienne et rigoureuse du support informatique aux utilisateurs (chercheurs, doctorants, personnel administratif) du laboratoire.
+          </p>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">→</span>
-              <span>Prise en charge quotidienne des tickets d'incidents signalés par les chercheurs et le personnel administratif via la plateforme <strong>GLPI</strong>.</span>
+              <span>Traitement et suivi des tickets d'incidents et de demandes de service centralisés via la plateforme de gestion <strong>GLPI</strong>.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">→</span>
-              <span>Diagnostic et résolution des pannes matérielles (remplacement de composants, dysfonctionnements de périphériques) et logicielles.</span>
+              <span>Diagnostic approfondi des pannes matérielles (composants défectueux, postes bloqués) et logicielles, suivis des interventions correctives de terrain.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">→</span>
-              <span>Assistance personnalisée aux utilisateurs sur l'utilisation des outils bureautiques, de la messagerie institutionnelle et des accès distants sécurisés.</span>
+              <span>Accompagnement et assistance personnalisée des utilisateurs pour la configuration de leurs accès réseau, messageries et outils collaboratifs.</span>
             </li>
           </ul>
         </div>
 
-        <!-- CARTE MISSION 3 : Réseau & Câblage -->
+        <!-- CARTE MISSION 3 : Interventions réseaux et câblage de proximité -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             3. Interventions réseaux et câblage de proximité
           </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+            Participation active à la maintenance de l'infrastructure physique et au raccordement des différents espaces de travail.
+          </p>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">→</span>
-              <span>Participation au brassage des baies de communication et identification des prises réseau murales dans les bureaux et salles de recherche.</span>
+              <span>Opérations de brassage dans les baies de communication et identification méthodique des prises murales dans les bureaux et salles expérimentales.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">→</span>
-              <span>Vérification des connexions filaires, test des câbles RJ45 et dépannage des prises murales défectueuses.</span>
+              <span>Contrôle de la connectivité filaire, test des câbles RJ45 et identification rapide des anomalies de liaison.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">→</span>
-              <span>Contribution au suivi de la topologie réseau locale et respect des normes de nommage des équipements.</span>
+              <span>Maintien en conditions opérationnelles du câblage de proximité et respect rigoureux du plan de nommage réseau du laboratoire.</span>
             </li>
           </ul>
         </div>
