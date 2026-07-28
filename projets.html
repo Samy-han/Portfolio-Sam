@@ -87,7 +87,7 @@
 
     <section class="section">
       <div class="container">
-        <!-- BARRE DE NAVIGATION INTERNE DES PROJETS -->
+        <!-- BARRE DE NAVIGATION INTERNE DES PROJETS (LISTE DÉFILANTE / ANCRAGES) -->
         <nav class="projets-nav" aria-label="Catégories de projets">
           <a href="#procedures" class="projets-nav__link projets-nav__link--active">
             <span aria-hidden="true">📋</span> Procédures
@@ -184,34 +184,35 @@
           </div>
         </div>
 
-        <!-- SECTION 2 : PROJET E5 (TRÈS DÉTAILLÉ - STAGE CINaM CNRS) -->
+        <!-- SECTION 2 : PROJET E5 (RÉALISATIONS PROFESSIONNELLES STAGE CINaM) -->
         <div id="projet-e5" style="margin-bottom: 60px;">
           <p class="section__eyebrow">Épreuve Professionnelle • BTS SIO SISR</p>
-          <h2 class="section__title">Projet E5 — Réalisations en Stage (CINaM CNRS)</h2>
-          <p class="section__desc">Synthèse des projets d'infrastructure, de sécurité avancée, de brassage et d'accès distants déployés au sein du laboratoire.</p>
+          <h2 class="section__title">Projet E5 — Dossier de Stage (CINaM CNRS)</h2>
+          <p class="section__desc">Synthèse détaillée des réalisations techniques d'infrastructure, de sécurité des postes (GPO/LAPS) et de réseaux menées en milieu professionnel.</p>
 
           <div class="rich-card">
             <div class="grid-duo" style="align-items: center; margin-bottom: 24px;">
               <div>
                 <span class="e6-card__tag" style="display:inline-block; margin-bottom:12px;">Stage Pratique • Juin - Août 2026</span>
-                <h3 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 12px;">Centre Interdisciplinaire de Nanoscience de Marseille (CINaM CNRS)</h3>
+                <h3 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 12px;">Centre Interdisciplinaire de Nanoscience de Marseille</h3>
                 <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-                  Durant cette période au sein du service informatique, j'ai participé activement à la refonte des infrastructures réseau, à la mise en place de passerelles d'accès distants sécurisées, ainsi qu'au renforcement de la supervision et de la gestion des identités.
+                  Ce dossier de réalisations professionnelles présente l'ensemble des interventions menées sur le campus de Luminy : sécurisation des postes par GPO et LAPS, refonte des baies de brassage, mise en place de passerelles d'accès distants et configuration de règles de détection SIEM.
                 </p>
                 <div>
+                  <span class="badge-tech">GPO & LAPS (Admin 4h)</span>
                   <span class="badge-tech">Aruba / HPE (Brassage)</span>
                   <span class="badge-tech">Teleport & Guacamole</span>
-                  <span class="badge-tech">Keycloak & PrivacyIDEA</span>
-                  <span class="badge-tech">Wazuh (SIEM & Règles Custom)</span>
+                  <span class="badge-tech">Wazuh (Règles Custom 1001+)</span>
                 </div>
               </div>
               <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px;">
-                <h4 style="font-size: 1rem; margin-bottom: 10px; color: var(--text-main);">Points clés du dossier E5 :</h4>
+                <h4 style="font-size: 1rem; margin-bottom: 10px; color: var(--text-main);">Points clés évalués en E5 :</h4>
                 <ul class="mission-list-custom">
-                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Refonte physique des baies de brassage et switches.</span></li>
+                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>GPO restrictive (interdiction de l'invite de commandes CMD).</span></li>
+                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Stratégie LAPS : renouvellement auto du mot de passe admin local toutes les 4h (compte install).</span></li>
+                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Refonte physique des baies de brassage et switches réseau.</span></li>
                   <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Déploiement Teleport (SSH) et Apache Guacamole (RDP).</span></li>
-                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Fédération d'identités Keycloak et MFA PrivacyIDEA.</span></li>
-                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Création de règles de détection personnalisées sur Wazuh (1001+).</span></li>
+                  <li class="mission-item-custom"><span class="mission-icon-bullet">✓</span><span>Supervision des menaces et règles personnalisées Wazuh.</span></li>
                 </ul>
               </div>
             </div>
