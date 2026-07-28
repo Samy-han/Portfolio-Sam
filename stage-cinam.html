@@ -3,200 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bilan Complet des Missions Techniques — Stage CINaM CNRS | Samy Hanifi">
-  <title>Bilan Technique & Projets — Stage CINaM CNRS | Samy Hanifi</title>
+  <meta name="description" content="Expériences professionnelles et bilan de stage — Samy Hanifi">
+  <title>Samy Hanifi — Expériences Professionnelles & Stage CINaM CNRS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .fade-in-up { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .rich-card {
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 32px;
       margin-bottom: 28px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .rich-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
       border-color: var(--primary, #2563eb);
     }
-    .grid-duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
-    .badge-tech {
-      display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px;
-      background: var(--bg-secondary); border: 1px solid var(--border-color);
-      border-radius: 20px; font-size: 0.85rem; font-weight: 500; color: var(--text-main);
-      transition: all 0.2s ease; margin: 4px;
-    }
-    .badge-tech:hover { border-color: var(--primary); transform: scale(1.05); }
-    .info-box {
-      background: var(--bg-secondary); border-left: 4px solid var(--primary);
-      padding: 20px; border-radius: 0 12px 12px 0; margin: 20px 0;
-    }
-
-    /* Stack & Architecture Cards */
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
-    }
-    .stack-card {
-      position: relative;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
-      padding: 32px;
-      overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .stack-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 4px;
-      background: linear-gradient(90deg, var(--primary), #60a5fa);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .stack-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.15);
-      border-color: var(--primary);
-    }
-    .stack-card:hover::before { opacity: 1; }
-    .stack-card-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 16px;
-    }
-    .stack-card-title svg { color: var(--primary); transition: transform 0.3s ease; }
-    .stack-card:hover .stack-card-title svg { transform: scale(1.1) rotate(5deg); }
-    .tech-pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-    .badge-tech-icon {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text-main);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .badge-tech-icon:hover {
-      background: var(--primary);
-      color: #ffffff;
-      border-color: var(--primary);
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-    }
-    .badge-tech-icon:hover svg { stroke: #ffffff; }
-
-    /* Mission list custom */
     .mission-list-custom { list-style: none; padding: 0; margin: 0; }
     .mission-item-custom {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border-color);
-      color: var(--text-muted);
-      line-height: 1.6;
-      font-size: 0.95rem;
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 12px 0; border-bottom: 1px solid var(--border-color);
+      color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;
     }
     .mission-item-custom:last-child { border-bottom: none; }
     .mission-icon-bullet {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      margin-top: 2px;
-      transition: all 0.2s ease;
+      flex-shrink: 0; width: 28px; height: 28px;
+      background: var(--bg-secondary); border: 1px solid var(--border-color);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      color: var(--primary); margin-top: 2px;
     }
-    .mission-item-custom:hover .mission-icon-bullet {
-      background: var(--primary);
-      color: #ffffff;
-      border-color: var(--primary);
-      transform: scale(1.1);
-    }
-
-    /* PDF Section styling */
-    .pdf-preview-box {
-      margin-top: 24px;
-      padding: 20px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .pdf-preview-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .pdf-title-info {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text-main);
-    }
-    .pdf-title-info svg { color: #ef4444; }
-    .pdf-actions { display: flex; gap: 10px; }
-    .pdf-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.88rem;
-      color: var(--text-main);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .pdf-btn:hover {
-      background: var(--primary);
-      color: #ffffff;
-      border-color: var(--primary);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-    }
-    .pdf-btn:hover svg { stroke: #ffffff; }
-    .pdf-embed-container {
-      width: 100%;
-      height: 480px;
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      overflow: hidden;
-      background: #ffffff;
-    }
-    .pdf-embed-container iframe { width: 100%; height: 100%; border: none; }
   </style>
 </head>
-<body data-page="profil">
+<body data-page="stages">
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo">
@@ -218,122 +60,18 @@
     <nav class="mobile-menu__nav" id="mobileNav" aria-label="Menu mobile"></nav>
   </div>
 
-  <main class="page-profil">
-    <!-- En-tête / Hero -->
-    <section class="page-hero page-hero--sub fade-in-up">
-      <div class="container">
-        <a href="experiences-pro.html" class="page-back">← Retour aux expériences professionnelles</a>
-        <p class="section__eyebrow">Bilan Technique des Missions • BTS SIO SISR</p>
-        <h1 class="page-hero__title">Centre Interdisciplinaire de Nanoscience de Marseille</h1>
-        <p class="page-hero__desc">Bilan approfondi des projets d'infrastructure, de réseaux, d'accès distants et de cybersécurité au CINaM (CNRS)</p>
-      </div>
-    </section>
-
-    <!-- Sommaire / Navigation interne sticky -->
-    <div class="profil-subnav">
-      <div class="container">
-        <nav class="profil-subnav__inner" aria-label="Sommaire détaillé">
-          <a href="#contexte" class="profil-subnav__link profil-subnav__link--active">Contexte & Structure</a>
-          <a href="#infrastructure" class="profil-subnav__link">Infrastructure & Stack</a>
-          <a href="#missions-techniques" class="profil-subnav__link">Missions & Projets Techniques</a>
-          <a href="#bilan" class="profil-subnav__link">Bilan & Compétences</a>
-        </nav>
-      </div>
-    </div>
-
-    <!-- SECTION 1 : CONTEXTE & STRUCTURE -->
-    <section class="section profil-section" id="contexte">
-      <div class="container">
-        <div class="profil-section__head">
-          <span class="profil-icon profil-icon--lg" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-          </span>
-          <div>
-            <p class="profil-section__subtitle">Présentation de l'organisme</p>
-            <h2 class="section__title">Le CINaM et son Service Informatique</h2>
-          </div>
-        </div>
-
-        <div class="rich-card">
-          <div class="grid-duo" style="align-items: center;">
-            <div>
-              <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.25rem;">Un laboratoire de recherche d'envergure nationale</h3>
-              <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-                Le <strong>Centre Interdisciplinaire de Nanoscience de Marseille (CINaM)</strong> est une unité mixte de recherche (UMR 7325) rattachée au <strong>CNRS</strong> et à <strong>Aix-Marseille Université</strong> sur le campus de Luminy.
-              </p>
-              <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-                Le service informatique pilote la modernisation des infrastructures, la sécurisation avancée des accès et la mise en œuvre de solutions d'authentification et de supervision de pointe.
-              </p>
-              <div class="info-box">
-                <p style="margin: 0; font-weight: 600; font-size: 0.95rem;">Fiche d'identité du stage :</p>
-                <p style="margin: 6px 0 0 0; color: var(--text-muted); font-size: 0.9rem;">
-                  • <strong>Période :</strong> Du 22 juin 2026 au 03 août 2026 (6 semaines)<br>
-                  • <strong>Lieu :</strong> Campus de Luminy, 13009 Marseille<br>
-                  • <strong>Domaine :</strong> Systèmes, Réseaux, Sécurité & Virtualisation
-                </p>
-              </div>
-            </div>
-            <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; display: flex; align-items: center; justify-content: center;">
-              <img src="assets/images/image-cinam.png" alt="Logo et locaux CINaM CNRS" style="width: 100%; max-height: 300px; object-fit: contain; border-radius: 8px; display: block;">
-            </div>
-          </div>
+  <main>
+    <section class="page-hero page-hero--sub">
+      <div class="container page-hero__wrap">
+        <div class="page-hero__content">
+          <a href="index.html" class="page-back">← Retour à l'accueil</a>
+          <p class="section__eyebrow">Parcours professionnel</p>
+          <h1 class="page-hero__title">Expériences & Stages</h1>
+          <p class="page-hero__desc">Bilan détaillé des missions menées en entreprise et en laboratoire (CINaM CNRS).</p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2 : INFRASTRUCTURE & STACK TECHNIQUE -->
-    <section class="section profil-section" id="infrastructure" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-      <div class="container">
-        <div class="profil-section__head">
-          <span class="profil-icon profil-icon--lg" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
-          </span>
-          <div>
-            <p class="profil-section__subtitle">Environnement technologique</p>
-            <h2 class="section__title">Stack & Outils Déployés</h2>
-          </div>
-        </div>
-
-        <div class="stack-grid">
-          <!-- CARTE 1 -->
-          <div class="stack-card">
-            <div class="stack-card-title">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-              Systèmes, Accès Distants & Virtualisation
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.6;">
-              Centralisation des services, conteneurisation et passerelles d'accès sécurisées pour les chercheurs.
-            </p>
-            <div class="tech-pill-grid">
-              <span class="badge-tech-icon">Proxmox VE & Docker</span>
-              <span class="badge-tech-icon">Teleport (Accès SSH sécurisés)</span>
-              <span class="badge-tech-icon">Apache Guacamole (Passerelle RDP)</span>
-              <span class="badge-tech-icon">Windows Server / Active Directory</span>
-              <span class="badge-tech-icon">Debian / Ubuntu Linux</span>
-            </div>
-          </div>
-
-          <!-- CARTE 2 -->
-          <div class="stack-card">
-            <div class="stack-card-title">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-              Réseaux, Sécurité & Authentification
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.6;">
-              Refonte physique des baies, authentification centralisée et supervision des menaces.
-            </p>
-            <div class="tech-pill-grid">
-              <span class="badge-tech-icon">Brassage & Switches Aruba / HPE</span>
-              <span class="badge-tech-icon">Keycloak (SSO & Fédération d'identités)</span>
-              <span class="badge-tech-icon">PrivacyIDEA (MFA / Double facteur)</span>
-              <span class="badge-tech-icon">Wazuh (SIEM & Règles personnalisées 1001+)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3 : MISSIONS & PROJETS TECHNIQUES (Brassage, Guacamole, Teleport, Keycloak, PrivacyIDEA, Wazuh, Postes) -->
     <section class="section profil-section" id="missions-techniques">
       <div class="container">
         <div class="profil-section__head">
@@ -342,58 +80,37 @@
           </span>
           <div>
             <p class="profil-section__subtitle">Réalisations techniques approfondies</p>
-            <h2 class="section__title">Détail des Projets Réalisés</h2>
+            <h2 class="section__title">Détail des Projets Réalisés au CINaM CNRS</h2>
           </div>
         </div>
 
-        <!-- 1. PRÉPARATION DES POSTES CHERCHEURS + PDF -->
+        <!-- 1. PRÉPARATION DES POSTES CHERCHEURS & GPO / LAPS -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            1. Préparation, configuration et sécurisation des postes pour les chercheurs
+            1. Préparation, configuration des postes & Sécurisation par GPO / LAPS
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-            Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement applicatif homogène, conforme aux exigences du CNRS et connecté au domaine institutionnel.
+            Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement sécurisé, conforme aux exigences du CNRS et rattaché à l'Active Directory.
           </p>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Nettoyage système :</strong> Suppression de la suite bureautique pré-installée d'origine sur les machines neuves.</span>
+              <span><strong>Nettoyage & Bureautique :</strong> Suppression des logiciels pré-installés d'origine, déploiement d'Office (depuis le NAS du labo), Firefox, Thunderbird et du logiciel d'analyse scientifique Origin.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Bureautique institutionnelle :</strong> Déploiement de la version propre d'Office récupérée depuis le NAS du laboratoire et activation des licences.</span>
+              <span><strong>Sécurité & Sauvegarde :</strong> Activation de <strong>BitLocker</strong>, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Outils & Communication :</strong> Installation de <strong>Mozilla Firefox</strong>, <strong>Mozilla Thunderbird</strong> et du logiciel d'analyse scientifique <strong>Origin</strong> (avec saisie de licence).</span>
+              <span><strong>Stratégies de groupe (GPO utilisateurs) :</strong> Mise en place de restrictions ciblées, notamment l'<strong>interdiction d'accès à l'invite de commandes (CMD)</strong> pour les utilisateurs standards afin d'empêcher toute manipulation non autorisée.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Sécurité & Sauvegarde :</strong> Activation de <strong>BitLocker</strong>, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>. Jonction au domaine Active Directory.</span>
+              <span><strong>Gestion sécurisée des mots de passe (LAPS) :</strong> Configuration de la stratégie LAPS pour le compte administrateur local <code>install</code> (dédié aux chercheurs pour installer leurs mises à jour logicielles), générant automatiquement un <strong>nouveau mot de passe unique toutes les 4 heures</strong>.</span>
             </li>
           </ul>
-
-          <!-- VISIONNEUSE ET BOUTON POUR LE PDF -->
-          <div class="pdf-preview-box">
-            <div class="pdf-preview-header">
-              <div class="pdf-title-info">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                <span>Documentation & Captures d'écran des étapes de préparation (PDF)</span>
-              </div>
-              <div class="pdf-actions">
-                <a href="documents/preparation-postes-cinam.pdf" target="_blank" class="pdf-btn">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Ouvrir en grand
-                </a>
-              </div>
-            </div>
-            <div class="pdf-embed-container">
-              <iframe src="documents/preparation-postes-cinam.pdf#toolbar=0" title="Captures d'écran préparation des postes">
-                <p>Votre navigateur ne supporte pas l'affichage direct des PDF. Vous pouvez <a href="documents/preparation-postes-cinam.pdf" target="_blank">télécharger le PDF ici</a>.</p>
-              </iframe>
-            </div>
-          </div>
         </div>
 
         <!-- 2. REFONTE DES BAIES DE BRASSAGE ET INFRASTRUCTURE RÉSEAU -->
@@ -403,16 +120,16 @@
             2. Refonte physique des baies de brassage et interconnexion campus
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-            Modernisation des armoires de communication pour fiabiliser le routage et optimiser le débit vers les nouveaux espaces (bâtiment Prisim).
+            Modernisation des armoires de communication pour fiabiliser le routage et optimiser le débit vers les nouveaux espaces.
           </p>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Brassage et câblage structuré :</strong> Nettoyage des armoires de brassage, remplacement des jarretières usagées et organisation rigoureuse des cordons cuivre et fibre optique.</span>
+              <span><strong>Brassage et câblage structuré :</strong> Nettoyage des armoires, remplacement des jarretières usagées et organisation rigoureuse des cordons cuivre/fibre.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Switches Aruba & HPE Comware :</strong> Configuration des équipements d'accès, mise en place du stacking et structuration des VLANs par département de recherche.</span>
+              <span><strong>Switches Aruba & HPE Comware :</strong> Configuration des équipements d'accès et structuration des VLANs par département.</span>
             </li>
           </ul>
         </div>
@@ -421,95 +138,36 @@
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13 12H3"/></svg>
-            3. Mise en place des passerelles d'accès sécurisées (Teleport & Apache Guacamole)
+            3. Passerelles d'accès sécurisées (Teleport & Apache Guacamole)
           </h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-            Déploiement de solutions modernes pour permettre aux chercheurs d'accéder à distance à leurs environnements de calcul et aux équipements du laboratoire en toute sécurité.
-          </p>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Teleport :</strong> Configuration de la plateforme d'accès unifié pour centraliser et sécuriser les connexions SSH distantes aux serveurs et grappes de calcul.</span>
+              <span><strong>Teleport :</strong> Centralisation et sécurisation des connexions SSH distantes aux serveurs et grappes de calcul.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Apache Guacamole :</strong> Déploiement de la passerelle client sans agent pour permettre le contrôle à distance des postes de laboratoire et des microscopes via un simple navigateur web en RDP sécurisé.</span>
+              <span><strong>Apache Guacamole :</strong> Déploiement de la passerelle web pour le contrôle à distance des postes de laboratoire et des microscopes en RDP sécurisé.</span>
             </li>
           </ul>
         </div>
 
-        <!-- 4. AUTHENTIFICATION & FÉDÉRATION : KEYCLOAK & PRIVACYIDEA -->
-        <div class="rich-card">
-          <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            4. Fédération d'identités et authentification forte (Keycloak & PrivacyIDEA)
-          </h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-            Renforcement majeur de la sécurité des authentifications pour l'ensemble des services du laboratoire.
-          </p>
-          <ul class="mission-list-custom">
-            <li class="mission-item-custom">
-              <span class="mission-icon-bullet">✓</span>
-              <span><strong>Keycloak :</strong> Mise en place du SSO (Single Sign-On) et de la fédération d'identités pour centraliser les connexions aux applications internes et externes.</span>
-            </li>
-            <li class="mission-item-custom">
-              <span class="mission-icon-bullet">✓</span>
-              <span><strong>PrivacyIDEA :</strong> Intégration de la solution d'authentification multifacteur (MFA / double facteur) pour valider les connexions sensibles des utilisateurs.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- 5. SUPERVISION & SÉCURITÉ : WAZUH -->
+        <!-- 4. SUPERVISION : WAZUH -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            5. Supervision de la sécurité et règles custom sous Wazuh
+            4. Supervision de la sécurité et règles custom sous Wazuh
           </h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-            Mise en place et optimisation de la plateforme de détection des menaces (SIEM/XDR).
-          </p>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Déploiement des agents Wazuh :</strong> Installation sur le parc de serveurs et postes critiques pour la collecte continue des journaux d'événements.</span>
+              <span><strong>Déploiement des agents Wazuh :</strong> Collecte continue des journaux sur les serveurs et postes critiques.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Création de règles personnalisées (1001+) :</strong> Rédaction et intégration de règles de détection spécifiques pour identifier rapidement les comportements suspects et les tentatives d'intrusion ciblées sur le réseau du labo.</span>
+              <span><strong>Règles personnalisées (1001+) :</strong> Rédaction de règles de détection spécifiques pour identifier les comportements suspects sur le réseau.</span>
             </li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4 : BILAN & COMPÉTENCES -->
-    <section class="section profil-section" id="bilan">
-      <div class="container">
-        <div class="profil-section__head">
-          <span class="profil-icon profil-icon--lg" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </span>
-          <div>
-            <p class="profil-section__subtitle">Conclusion du stage</p>
-            <h2 class="section__title">Bilan Professionnel & Personnel</h2>
-          </div>
-        </div>
-
-        <div class="rich-card" style="max-width: 900px; margin: 0 auto;">
-          <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem;">Acquis et apports de l'expérience</h3>
-          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-            Cette expérience au CINaM (CNRS) dans le cadre de mon <strong>BTS SIO option SISR</strong> m'a permis de travailler sur des technologies de pointe en matière d'infrastructure, d'accès distants sécurisés et de cybersécurité institutionnelle.
-          </p>
-          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">
-            La mise en œuvre concrète du brassage réseau, du SIEM Wazuh avec ses règles custom, des passerelles Teleport et Guacamole, ainsi que des solutions d'authentification Keycloak et PrivacyIDEA m'a offert une vision globale et opérationnelle de la sécurisation des systèmes d'information modernes.
-          </p>
-          
-          <div style="border-top: 1px solid var(--border-color); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 10px;">
-            <span class="badge-tech" style="font-weight: 600; background: var(--bg-card);">✅ Brassage & Réseaux (Aruba / HPE)</span>
-            <span class="badge-tech" style="font-weight: 600; background: var(--bg-card);">✅ Accès Distants (Teleport & Guacamole)</span>
-            <span class="badge-tech" style="font-weight: 600; background: var(--bg-card);">✅ SSO & MFA (Keycloak & PrivacyIDEA)</span>
-            <span class="badge-tech" style="font-weight: 600; background: var(--bg-card);">✅ SIEM & Règles Custom (Wazuh 1001+)</span>
-          </div>
         </div>
       </div>
     </section>
@@ -518,7 +176,6 @@
   <script src="js/config.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/profil-nav.js"></script>
   <script src="js/animations.js"></script>
 </body>
 </html>
