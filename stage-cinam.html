@@ -3,70 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rapport de Stage au CINaM CNRS — Samy Hanifi">
+  <meta name="description" content="Rapport de Stage détaillé au CINaM CNRS — Samy Hanifi">
   <title>Stage CINaM CNRS — Samy Hanifi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Styles et animations fluides sur mesure */
-    .fade-in-up {
-      animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .custom-card {
+    .fade-in-up { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .rich-card {
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 16px;
-      padding: 28px;
+      padding: 32px;
+      margin-bottom: 24px;
     }
-    .custom-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
+    .rich-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
       border-color: var(--primary, #2563eb);
     }
-    .tech-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text-main);
-      transition: all 0.2s ease;
+    .grid-duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .badge-tech {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px;
+      background: var(--bg-secondary); border: 1px solid var(--border-color);
+      border-radius: 20px; font-size: 0.85rem; font-weight: 500; color: var(--text-main);
+      transition: all 0.2s ease; margin: 4px;
     }
-    .tech-pill:hover {
-      border-color: var(--primary);
-      transform: scale(1.05);
-    }
-    .mission-list {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    .mission-list li {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: 12px;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    .mission-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 1.2rem;
+    .badge-tech:hover { border-color: var(--primary); transform: scale(1.05); }
+    .detail-list { list-style: none; padding: 0; margin: 0; }
+    .detail-list li { position: relative; padding-left: 24px; margin-bottom: 14px; color: var(--text-muted); line-height: 1.6; }
+    .detail-list li::before { content: "→"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+    .info-box {
+      background: var(--bg-secondary); border-left: 4px solid var(--primary);
+      padding: 20px; border-radius: 0 12px 12px 0; margin: 20px 0;
     }
   </style>
 </head>
@@ -93,115 +65,117 @@
   </div>
 
   <main class="page-profil">
-    <!-- LE HEADER & LE FIL D'ARIANE -->
+    <!-- En-tête / Hero -->
     <section class="page-hero page-hero--sub fade-in-up">
       <div class="container">
-        <a href="experiences-pro.html" class="page-back">← Retour à mes expériences</a>
-        <p class="section__eyebrow">Rapport de stage • BTS SIO SISR</p>
-        <h1 class="page-hero__title">Centre Interdisciplinaire de Nanoscience de Marseille (CINaM — CNRS)</h1>
-        <p class="page-hero__desc">Durée : 6 semaines • Période : 22/06/2026 – 03/08/2026 • Campus de Luminy</p>
+        <a href="experiences-pro.html" class="page-back">← Retour aux expériences professionnelles</a>
+        <p class="section__eyebrow">Rapport de Stage Complet • BTS SIO SISR</p>
+        <h1 class="page-hero__title">Centre Interdisciplinaire de Nanoscience de Marseille</h1>
+        <p class="page-hero__desc">Immersion professionnelle au cœur du département informatique du CINaM (CNRS) • Campus de Luminy</p>
       </div>
     </section>
 
-    <!-- LE SOMMAIRE / NAVIGATION INTERNE (Sticky Sub-nav) -->
+    <!-- Sommaire / Navigation interne sticky -->
     <div class="profil-subnav">
       <div class="container">
-        <nav class="profil-subnav__inner" aria-label="Sommaire du rapport de stage">
-          <a href="#presentation" class="profil-subnav__link profil-subnav__link--active">Présentation</a>
-          <a href="#environnement" class="profil-subnav__link">Environnement Technique</a>
-          <a href="#missions" class="profil-subnav__link">Missions & Réalisations</a>
+        <nav class="profil-subnav__inner" aria-label="Sommaire détaillé">
+          <a href="#contexte" class="profil-subnav__link profil-subnav__link--active">Contexte & Structure</a>
+          <a href="#infrastructure" class="profil-subnav__link">Infrastructure & Stack</a>
+          <a href="#missions" class="profil-subnav__link">Missions Détaillées</a>
+          <a href="#realisations" class="profil-subnav__link">Projets & Réalisations</a>
           <a href="#bilan" class="profil-subnav__link">Bilan & Compétences</a>
         </nav>
       </div>
     </div>
 
-    <!-- SECTION 1 : PRÉSENTATION DE L'ORGANISME D'ACCUEIL -->
-    <section class="section profil-section" id="presentation">
+    <!-- SECTION 1 : CONTEXTE & STRUCTURE -->
+    <section class="section profil-section" id="contexte">
       <div class="container">
         <div class="profil-section__head">
           <span class="profil-icon profil-icon--lg" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
           </span>
           <div>
-            <p class="profil-section__subtitle">Structure d'accueil</p>
-            <h2 class="section__title">Présentation du CINaM</h2>
+            <p class="profil-section__subtitle">Présentation de l'organisme</p>
+            <h2 class="section__title">Le CINaM et son Service Informatique</h2>
           </div>
         </div>
 
-        <div class="profil-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; align-items: center;">
-          <!-- Colonne gauche : Description détaillée -->
-          <div>
-            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-              Le <strong>Centre Interdisciplinaire de Nanoscience de Marseille (CINaM)</strong> est un laboratoire de recherche publique de premier plan, placé sous la double tutelle du <strong>CNRS</strong> et d'Aix-Marseille Université. 
-            </p>
-            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-              Implanté au cœur du campus scientifique de <strong>Luminy</strong>, le laboratoire regroupe des chercheurs, enseignants-chercheurs, ingénieurs et techniciens spécialisés dans l'étude des nanosciences et des nanomatériaux. Le service informatique y joue un rôle critique pour garantir la continuité des recherches, la haute disponibilité des serveurs et la protection des données sensibles.
-            </p>
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 16px; border-radius: 12px;">
-              <p style="margin: 0; font-size: 0.95rem; font-weight: 600;">📍 Localisation : Campus de Luminy, Marseille</p>
-              <p style="margin: 8px 0 0 0; font-size: 0.95rem; color: var(--text-muted);">⏱️ Durée & Période : 6 semaines (22/06/2026 – 03/08/2026)</p>
+        <div class="rich-card">
+          <div class="grid-duo" style="align-items: center;">
+            <div>
+              <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.25rem;">Un laboratoire de recherche d'envergure nationale</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+                Le <strong>Centre Interdisciplinaire de Nanoscience de Marseille (CINaM)</strong> est une unité mixte de recherche (UMR 7325) rattachée conjointement au <strong>CNRS</strong> et à <strong>Aix-Marseille Université</strong>. Situé sur le campus scientifique de Luminy, il regroupe plus de 150 personnes (chercheurs, enseignants-chercheurs, techniciens et doctorants).
+              </p>
+              <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+                Le service informatique du laboratoire assure la gestion globale, l'évolution et la sécurisation du système d'information. Il garantit la mise en œuvre des infrastructures réseaux, le support aux utilisateurs et la disponibilité des serveurs de calculs et de données.
+              </p>
+              <div class="info-box">
+                <p style="margin: 0; font-weight: 600; font-size: 0.95rem;">Fiche d'identité du stage :</p>
+                <p style="margin: 6px 0 0 0; color: var(--text-muted); font-size: 0.9rem;">
+                  • <strong>Période :</strong> Du 22 juin 2026 au 03 août 2026 (6 semaines)<br>
+                  • <strong>Lieu :</strong> Campus de Luminy, 13009 Marseille<br>
+                  • <strong>Encadrement :</strong> Équipe des ingénieurs systèmes et réseaux du CINaM
+                </p>
+              </div>
             </div>
-          </div>
-
-          <!-- Colonne droite : Image du CINaM intégrée en entier (object-fit contain) avec bordure soignée -->
-          <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-            <img src="assets/images/image-cinam.png" alt="CINaM CNRS Campus de Luminy" style="width: 100%; max-height: 280px; object-fit: contain; border-radius: 8px; display: block;">
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/image-cinam.png" alt="Logo et locaux CINaM CNRS" style="width: 100%; max-height: 300px; object-fit: contain; border-radius: 8px; display: block;">
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2 : ENVIRONNEMENT TECHNIQUE & OUTILS -->
-    <section class="section profil-section" id="environnement" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <!-- SECTION 2 : INFRASTRUCTURE & STACK TECHNIQUE -->
+    <section class="section profil-section" id="infrastructure" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
       <div class="container">
         <div class="profil-section__head">
           <span class="profil-icon profil-icon--lg" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
           </span>
           <div>
-            <p class="profil-section__subtitle">Stack technologique</p>
-            <h2 class="section__title">Environnement Technique & Outils</h2>
+            <p class="profil-section__subtitle">Environnement technique</p>
+            <h2 class="section__title">Architecture & Technologies Utilisées</h2>
           </div>
         </div>
 
-        <div class="profil-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-          <!-- Carte 1 -->
-          <div class="custom-card">
-            <h3 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--primary);">Systèmes & Annuaire</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span class="tech-pill">Windows Server</span>
-              <span class="tech-pill">Active Directory</span>
-              <span class="tech-pill">Linux (Debian / Ubuntu)</span>
-              <span class="tech-pill">Proxmox VE</span>
+        <div class="grid-duo">
+          <div class="rich-card">
+            <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.15rem;">Systèmes & Virtualisation</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+              L'infrastructure s'appuie sur un parc hétérogène et hautement sécurisé gérant à la fois des environnements serveurs centralisés et des postes de travail utilisateurs.
+            </p>
+            <div>
+              <span class="badge-tech">Windows Server 2016/2019/2022</span>
+              <span class="badge-tech">Active Directory (AD DS)</span>
+              <span class="badge-tech">Debian GNU/Linux</span>
+              <span class="badge-tech">Ubuntu Server</span>
+              <span class="badge-tech">Proxmox VE</span>
+              <span class="badge-tech">Docker / Conteneurs</span>
             </div>
           </div>
 
-          <!-- Carte 2 -->
-          <div class="custom-card">
-            <h3 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--primary);">Réseaux & Sécurité</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span class="tech-pill">Cisco / Switch</span>
-              <span class="tech-pill">VLAN & Routage</span>
-              <span class="tech-pill">DNS / DHCP</span>
-              <span class="tech-pill">Pare-feu / Firewall</span>
-            </div>
-          </div>
-
-          <!-- Carte 3 -->
-          <div class="custom-card">
-            <h3 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--primary);">Support & Supervision</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span class="tech-pill">GLPI (Ticketing)</span>
-              <span class="tech-pill">Zabbix / Wazuh</span>
-              <span class="tech-pill">Scripts Bash / PowerShell</span>
-              <span class="tech-pill">Maintenance Matériel</span>
+          <div class="rich-card">
+            <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.15rem;">Réseaux, Sécurité & Support</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+              Le réseau du laboratoire est soumis aux règles strictes de sécurité du CNRS, nécessitant une segmentation rigoureuse et une supervision constante.
+            </p>
+            <div>
+              <span class="badge-tech">Switches Cisco & HP</span>
+              <span class="badge-tech">VLAN / Routage inter-VLAN</span>
+              <span class="badge-tech">Firewall / Pare-feu</span>
+              <span class="badge-tech">GLPI (Gestion de parc & Tickets)</span>
+              <span class="badge-tech">Zabbix / Supervision</span>
+              <span class="badge-tech">Bash / PowerShell</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3 : DÉTAIL DES MISSIONS (Missions opérationnelles) -->
+    <!-- SECTION 3 : MISSIONS DÉTAILLÉES -->
     <section class="section profil-section" id="missions">
       <div class="container">
         <div class="profil-section__head">
@@ -210,70 +184,104 @@
           </span>
           <div>
             <p class="profil-section__subtitle">Activités opérationnelles</p>
-            <h2 class="section__title">Missions & Réalisations</h2>
+            <h2 class="section__title">Missions et Tâches Réalisées</h2>
           </div>
         </div>
 
-        <div class="profil-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-          <!-- Pôle 1 : Gestion du parc -->
-          <div class="custom-card">
-            <h3 style="font-size: 1.15rem; margin-bottom: 16px; color: var(--primary);">Gestion du Parc & Support</h3>
-            <ul class="mission-list">
-              <li>Traitement des tickets d'incidents et assistance technique auprès du personnel de recherche.</li>
-              <li>Préparation, déploiement et configuration des postes de travail (Windows / Linux).</li>
-              <li>Suivi d'inventaire et traçabilité du matériel informatique via l'outil GLPI.</li>
+        <div class="rich-card">
+          <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem;">1. Support technique et gestion des incidents (Helpdesk)</h3>
+          <ul class="detail-list">
+            <li>Prise en charge quotidienne des tickets d'incidents signalés par les chercheurs et le personnel administratif via la plateforme <strong>GLPI</strong>.</li>
+            <li>Diagnostic et résolution des pannes matérielles (remplacement de composants, dysfonctionnements de périphériques) et logicielles.</li>
+            <li>Assistance personnalisée aux utilisateurs sur l'utilisation des outils bureautiques, de la messagerie institutionnelle et des accès distants sécurisés (VPN).</li>
+          </ul>
+        </div>
+
+        <div class="rich-card">
+          <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem;">2. Administration des postes et déploiement système</h3>
+          <ul class="detail-list">
+            <li>Préparation, formatage et déploiement de nouveaux postes de travail (stations sous Windows et postes GNU/Linux).</li>
+            <li>Intégration des machines au domaine Active Directory du laboratoire, gestion des stratégies de groupe (GPO) et des droits d'accès utilisateurs.</li>
+            <li>Mise en place de scripts d'automatisation pour simplifier l'installation des logiciels indispensables aux équipes de recherche.</li>
+          </ul>
+        </div>
+
+        <div class="rich-card">
+          <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem;">3. Interventions réseaux et câblage de proximité</h3>
+          <ul class="detail-list">
+            <li>Participation au brassage des baies de communication et identification des prises réseau murales dans les bureaux et salles de TP/recherche.</li>
+            <li>Vérification des connexions filaires, test des câbles RJ45 et dépannage des prises murales défectueuses.</li>
+            <li>Contribution au suivi de la topologie réseau locale et respect des normes de nommage des équipements.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 : PROJETS & RÉALISATIONS -->
+    <section class="section profil-section" id="realisations" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="profil-section__head">
+          <span class="profil-icon profil-icon--lg" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </span>
+          <div>
+            <p class="profil-section__subtitle">Projets phares</p>
+            <h2 class="section__title">Projets d'Amélioration & Sécurité</h2>
+          </div>
+        </div>
+
+        <div class="grid-duo">
+          <div class="rich-card" style="margin-bottom: 0;">
+            <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.15rem;">Audit et mise à jour du parc sous GLPI</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+              Refonte partielle de la base d'inventaire du matériel informatique pour assurer une traçabilité optimale des équipements obsolètes ou en fin de garantie au sein du laboratoire.
+            </p>
+            <ul class="detail-list" style="font-size: 0.9rem;">
+              <li>Inventaire physique rigoureux des salles serveurs et bureaux.</li>
+              <li>Mise à jour des fiches d'affectation et étiquetage du matériel.</li>
             </ul>
           </div>
 
-          <!-- Pôle 2 : Réseau et Câblage -->
-          <div class="custom-card">
-            <h3 style="font-size: 1.15rem; margin-bottom: 16px; color: var(--primary);">Réseau & Câblage</h3>
-            <ul class="mission-list">
-              <li>Interventions sur les prises murales et brassage des baies de communication du laboratoire.</li>
-              <li>Vérification et diagnostic de la connectivité réseau des équipements de recherche.</li>
-              <li>Participation au suivi des VLANs et à la résolution des pannes de connexion.</li>
-            </ul>
-          </div>
-
-          <!-- Pôle 3 : Administration serveurs et sécurité -->
-          <div class="custom-card">
-            <h3 style="font-size: 1.15rem; margin-bottom: 16px; color: var(--primary);">Administration & Sécurité</h3>
-            <ul class="mission-list">
-              <li>Participation à l'administration des serveurs sous environnements Windows et Linux.</li>
-              <li>Application rigoureuse des politiques de sécurité et des normes imposées par le CNRS.</li>
-              <li>Mise en place de procédures de sauvegarde et vérification de la intégrité des données.</li>
+          <div class="rich-card" style="margin-bottom: 0;">
+            <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.15rem;">Sécurisation des accès aux postes partagés</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+              Participation à la mise en conformité des postes en libre-service dans les salles expérimentales afin de renforcer la sécurité globale conformément aux directives de l'ANSSI et du CNRS.
+            </p>
+            <ul class="detail-list" style="font-size: 0.9rem;">
+              <li>Application de stratégies de verrouillage automatique de session.</li>
+              <li>Restriction des droits administrateurs locaux.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4 : BILAN PERSONNEL ET PROFESSIONNEL -->
-    <section class="section profil-section" id="bilan" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <!-- SECTION 5 : BILAN & COMPÉTENCES -->
+    <section class="section profil-section" id="bilan">
       <div class="container">
         <div class="profil-section__head">
           <span class="profil-icon profil-icon--lg" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </span>
           <div>
-            <p class="profil-section__subtitle">Conclusion</p>
-            <h2 class="section__title">Bilan & Compétences Acquises</h2>
+            <p class="profil-section__subtitle">Conclusion du stage</p>
+            <h2 class="section__title">Bilan Professionnel & Personnel</h2>
           </div>
         </div>
 
-        <div class="profil-content">
-          <div class="custom-card" style="max-width: 850px; margin: 0 auto;">
-            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-              Ce stage de 6 semaines au sein du CINaM (CNRS) a constitué une opportunité majeure pour mon parcours en <strong>BTS SIO SISR</strong>. J'ai pu confronter les acquis théoriques de ma formation aux exigences concrètes d'une infrastructure informatique de recherche scientifique de pointe.
-            </p>
-            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-              Sur le plan technique, j'ai considérablement renforcé mes compétences en administration systèmes, en gestion des réseaux et en résolution d'incidents complexes. Sur le plan humain, l'immersion au sein d'une équipe d'ingénieurs expérimentés a développé mon sens des responsabilités, ma rigueur méthodologique et ma capacité d'écoute face aux utilisateurs.
-            </p>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
-              <span class="tech-pill" style="background: var(--bg-card); font-weight: 600;">✅ Autonomie renforcée</span>
-              <span class="tech-pill" style="background: var(--bg-card); font-weight: 600;">✅ Rigueur professionnelle</span>
-              <span class="tech-pill" style="background: var(--bg-card); font-weight: 600;">✅ Maîtrise des outils SISR</span>
-            </div>
+        <div class="rich-card" style="max-width: 900px; margin: 0 auto;">
+          <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem;">Acquis et apports de l'expérience</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+            Ce stage de 6 semaines au CINaM (CNRS) a été une expérience déterminante pour mon parcours en <strong>BTS SIO option SISR</strong>. J'ai eu l'opportunité de confronter les notions théoriques abordées en cours à la réalité opérationnelle d'un grand organisme de recherche publique.
+          </p>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">
+            Sur le plan technique, j'ai gagné en aisance sur l'administration des serveurs, la gestion des annuaires Active Directory, le diagnostic réseau et l'utilisation d'outils professionnels de ticketing (GLPI). Sur le plan humain, l'immersion au sein d'une équipe technique m'a permis de développer mon sens des responsabilités, ma rigueur face aux protocoles de sécurité et ma capacité d'écoute auprès des utilisateurs.
+          </p>
+          
+          <div style="border-top: 1px solid var(--border-color); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 10px;">
+            <span class="badge-tech" style="font-weight: 600; background: var(--bg-card);">✅ Autonomie en Support Systèmes</span>
+            <span class="badge-tech" style="font-weight: 600; background: var(--bg-card);">✅ Rigueur Sécurité & Réseau</span>
+            <span class="badge-tech" style="font-weight: 600; background: var(--bg-card);">✅ Expérience en Milieu de Recherche</span>
           </div>
         </div>
       </div>
