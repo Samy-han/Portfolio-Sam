@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Animation et style pour l'effet de survol de la carte */
+    /* Animation fluide au survol de la carte */
     .stage-card-hover {
       text-decoration: none;
       color: inherit;
@@ -19,7 +19,7 @@
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 24px;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .stage-card-hover:hover {
       transform: translateY(-6px);
@@ -77,25 +77,26 @@
         <div class="profil-content">
           <div class="stages-list">
             
-            <!-- Bandeau cliquable avec image, animation de survol et sans texte de clic -->
+            <!-- Carte cliquable avec animation, sans texte superflu et avec emplacement image propre -->
             <a href="stage-cinam.html" class="stage-card-hover">
               <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
                 
-                <!-- Image du centre / campus -->
-                <div style="flex: 0 0 240px; width: 100%; max-width: 240px; height: 150px; border-radius: 10px; overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-color);">
-                  <img src="images/cinam-campus.jpg" alt="CINaM CNRS Campus de Luminy" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- Zone image pour mettre l'image du CINaM -->
+                <div style="flex: 0 0 260px; width: 100%; max-width: 260px; height: 160px; border-radius: 10px; overflow: hidden; background: var(--bg-secondary); border: 2px dashed var(--border-color); display: flex; align-items: center; justify-content: center; text-align: center;">
+                  <!-- Remplace l'attribut src par le chemin de ton image : <img src="chemin/vers/image-cinam.jpg" alt="CINaM" style="width: 100%; height: 100%; object-fit: cover;"> -->
+                  <span style="font-size: 0.85rem; color: var(--text-muted); padding: 12px;">Glisse ton image ici (ou modifie le src)</span>
                 </div>
 
-                <!-- Contenu de la carte -->
+                <!-- Informations du stage -->
                 <div style="flex: 1; min-width: 260px;">
                   <div class="stage-card__header" style="margin-bottom: 8px;">
                     <span class="stage-card__badge">Stage — 6 semaines</span>
-                    <span class="stage-card__period">22/06/2026 – 03/08/2026[cite: 2]</span>
+                    <span class="stage-card__period">22/06/2026 – 03/08/2026</span>
                   </div>
                   <h3 style="margin-bottom: 6px;">Stagiaire Technicien Systèmes et Réseaux</h3>
-                  <p class="stage-card__role" style="margin-bottom: 10px;">Centre Interdisciplinaire de Nanoscience de Marseille (CINaM — CNRS) — Campus de Luminy[cite: 2]</p>
+                  <p class="stage-card__role" style="margin-bottom: 10px;">Centre Interdisciplinaire de Nanoscience de Marseille (CINaM — CNRS) — Campus de Luminy</p>
                   <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6; margin: 0;">
-                    Immersion au sein du service informatique d'un laboratoire de recherche de premier plan rattaché au CNRS[cite: 2]. Participation active à l'administration des infrastructures systèmes, à la sécurisation, à la gestion du parc et au réseau.
+                    Immersion au sein du service informatique d'un laboratoire de recherche de premier plan rattaché au CNRS. Participation active à l'administration des infrastructures systèmes, à la sécurisation, à la gestion du parc et au réseau.
                   </p>
                 </div>
 
