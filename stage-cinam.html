@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Styles spécifiques et animations fluides pour enrichir la page */
+    /* Styles et animations fluides */
     .fade-in-up {
       animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
@@ -72,7 +72,7 @@
   </div>
 
   <main class="page-profil">
-    <!-- Hero Section -->
+    <!-- 1. En-tête / Hero Section avec retour propre -->
     <section class="page-hero page-hero--sub fade-in-up">
       <div class="container">
         <a href="experiences-pro.html" class="page-back">← Retour aux expériences</a>
@@ -82,7 +82,7 @@
       </div>
     </section>
 
-    <!-- Subnav de navigation interne -->
+    <!-- 2. Sommaire / Navigation interne sticky -->
     <div class="profil-subnav">
       <div class="container">
         <nav class="profil-subnav__inner" aria-label="Sections rapport de stage">
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-    <!-- Section 1 : Présentation -->
+    <!-- 3. Section Présentation de l'organisme et Image entière non coupée -->
     <section class="section profil-section" id="presentation">
       <div class="container">
         <div class="profil-section__head">
@@ -110,25 +110,25 @@
         <div class="profil-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; align-items: center;">
           <div>
             <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-              Stage d'une durée de 6 semaines effectué au sein du service informatique du <strong>Centre Interdisciplinaire de Nanoscience de Marseille (CINaM)</strong>, un laboratoire de recherche de premier plan rattaché au <strong>CNRS</strong> et à l'Aix-Marseille Université.
+              Stage de 6 semaines effectué au sein du service informatique du <strong>Centre Interdisciplinaire de Nanoscience de Marseille (CINaM)</strong>, laboratoire de recherche de premier plan rattaché au <strong>CNRS</strong> et à l'Aix-Marseille Université.
             </p>
             <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-              Situé sur le campus de Luminy, le laboratoire regroupe des chercheurs et ingénieurs de haut niveau. Le service informatique veille au maintien en conditions opérationnelles d'une infrastructure complexe et hautement sécurisée.
+              Situé sur le campus de Luminy, le laboratoire requiert une infrastructure informatique hautement sécurisée pour soutenir les travaux des chercheurs et ingénieurs.
             </p>
             <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 16px; border-radius: 12px;">
               <p style="margin: 0; font-size: 0.95rem; font-weight: 600;">📍 Localisation : Campus de Luminy, Marseille</p>
               <p style="margin: 8px 0 0 0; font-size: 0.95rem; color: var(--text-muted);">⏱️ Période : 22/06/2026 – 03/08/2026</p>
             </div>
           </div>
-          <!-- Conteneur d'image optimisé pour voir l'image en entier sans être coupée -->
-          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 16px; display: flex; align-items: center; justify-content: center; background-color: var(--bg-secondary);">
-            <img src="assets/images/image-cinam.png" alt="CINaM CNRS Campus de Luminy" style="width: 100%; max-height: 280px; object-fit: contain; border-radius: 8px; display: block;">
+          <!-- Conteneur image optimisé : object-fit contain pour voir toute l'image sans coupe -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; display: flex; align-items: center; justify-content: center; background-color: var(--bg-secondary);">
+            <img src="assets/images/image-cinam.png" alt="CINaM CNRS Campus de Luminy" style="width: 100%; max-height: 260px; object-fit: contain; border-radius: 8px; display: block;">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2 : Environnement Technique -->
+    <!-- 4. Section Environnement Technique (Stack & Outils) -->
     <section class="section profil-section" id="environnement" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
       <div class="container">
         <div class="profil-section__head">
@@ -175,7 +175,7 @@
       </div>
     </section>
 
-    <!-- Section 3 : Missions & Réalisations -->
+    <!-- 5. Section Missions & Réalisations -->
     <section class="section profil-section" id="missions">
       <div class="container">
         <div class="profil-section__head">
@@ -192,28 +192,28 @@
           <div class="hover-card">
             <h3 style="font-size: 1.15rem; margin-bottom: 12px; color: var(--primary);">Administration des Systèmes</h3>
             <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
-              Participation active à la gestion et l'optimisation des serveurs et postes de travail. Suivi des utilisateurs et déploiement d'applications au sein du laboratoire.
+              Participation active à la gestion et l'optimisation des serveurs et postes de travail, gestion des comptes utilisateurs et maintenance du parc.
             </p>
           </div>
 
           <div class="hover-card">
             <h3 style="font-size: 1.15rem; margin-bottom: 12px; color: var(--primary);">Réseaux et Sécurisation</h3>
             <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
-              Interventions sur l'infrastructure réseau interne, vérification des connectivités et application rigoureuse des consignes de sécurité imposées par le CNRS.
+              Interventions sur l'infrastructure réseau interne, vérification des connectivités et application rigoureuse des consignes de sécurité du CNRS.
             </p>
           </div>
 
           <div class="hover-card">
             <h3 style="font-size: 1.15rem; margin-bottom: 12px; color: var(--primary);">Support aux Utilisateurs</h3>
             <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
-              Traitement des tickets d'incidents, assistance technique auprès des chercheurs, diagnostic des pannes matérielles et logicielles.
+              Traitement des tickets d'incidents via GLPI, assistance technique auprès des chercheurs, diagnostic et résolution des pannes matérielles.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 4 : Bilan -->
+    <!-- 6. Section Bilan -->
     <section class="section profil-section" id="bilan" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
       <div class="container">
         <div class="profil-section__head">
@@ -229,10 +229,10 @@
         <div class="profil-content">
           <div class="hover-card" style="max-width: 800px; margin: 0 auto;">
             <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
-              Ce stage au sein du CINaM (CNRS) m'a permis de consolider mes compétences en administration systèmes et réseaux dans un environnement professionnel exigeant. J'ai pu mettre en pratique les enseignements de mon BTS SIO SISR tout en découvrant les spécificités de la gestion informatique dans la recherche scientifique.
+              Ce stage au sein du CINaM (CNRS) m'a permis de consolider mes compétences techniques en administration systèmes et réseaux dans un cadre professionnel exigeant.
             </p>
             <p style="color: var(--text-muted); line-height: 1.7; margin: 0;">
-              Une expérience humaine et technique très enrichissante qui a renforcé mon autonomie, ma rigueur et mon sens du service utilisateur.
+              J'ai pu confronter les acquis de ma formation BTS SIO SISR aux réalités d'un service informatique de recherche, renforçant ainsi mon autonomie et ma rigueur.
             </p>
           </div>
         </div>
