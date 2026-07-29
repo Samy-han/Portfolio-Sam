@@ -36,8 +36,6 @@
       border-radius: 8px; display: flex; align-items: center; justify-content: center;
       color: var(--primary); margin-top: 2px;
     }
-
-    /* Style du visuel intégré en bas du bloc */
     .card-visual-bottom {
       position: relative;
       width: 100%;
@@ -48,12 +46,6 @@
       margin-top: 24px;
       margin-bottom: 20px;
       border: 1px solid var(--border-color);
-    }
-    .card-visual-bottom img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
     }
     .card-visual-badge {
       position: absolute;
@@ -118,7 +110,7 @@
           </div>
         </div>
 
-        <!-- 1. PRÉPARATION DES POSTES CHERCHEURS (BLOC RICHE + IMAGE EN BAS + BOUTON) -->
+        <!-- 1. PRÉPARATION DES POSTES CHERCHEURS -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
@@ -138,9 +130,9 @@
             </li>
           </ul>
 
-          <!-- Visuel et bouton intégrés en bas dans le même bloc -->
+          <!-- Visuel complet avec style inline 'object-fit: contain' -->
           <div class="card-visual-bottom">
-            <img src="assets/images/procedures/procedure-preparation-postes.png" alt="Capture d'écran — procédure préparation postes chercheurs" loading="lazy">
+            <img src="assets/images/procedures/procedure-preparation-postes.png" alt="Capture d'écran — procédure préparation postes chercheurs" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
             <span class="card-visual-badge">Stage CINaM</span>
           </div>
 
