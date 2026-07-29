@@ -49,6 +49,10 @@ const PROJETS_SUBMENU = `
       <span class="profil-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
       <span class="nav__submenu-link-text"><strong>Mes procédures</strong><span>Procédures techniques détaillées</span></span>
     </a>
+    <a href="projets.html#projet-e5" class="nav__submenu-link">
+      <span class="profil-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg></span>
+      <span class="nav__submenu-link-text"><strong>Projet E5</strong><span>Dossier de stage CINaM CNRS</span></span>
+    </a>
     <a href="projets.html#projet-e6" class="nav__submenu-link">
       <span class="profil-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg></span>
       <span class="nav__submenu-link-text"><strong>Projet E6</strong><span>Projet de fin de formation BTS SIO SISR</span></span>
@@ -94,6 +98,7 @@ const ICON = {
   stages: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>',
   expPro: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>',
   procedures: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+  e5: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>',
   e6: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>',
   veilleTech: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
   veilleJur: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
@@ -170,6 +175,7 @@ function renderMobileNav(container, active) {
     <div class="mobile-menu__group">
       <p class="mobile-menu__group-title"><span class="profil-icon profil-icon--title" aria-hidden="true">${ICON.travaux}</span>Projets</p>
       ${mobileLink("projets.html#procedures", "Mes procédures — Procédures techniques détaillées", ICON.procedures, false, true)}
+      ${mobileLink("projets.html#projet-e5", "Projet E5 — Dossier de stage CINaM CNRS", ICON.e5, false, true)}
       ${mobileLink("projets.html#projet-e6", "Projet E6 — Fin de formation BTS SIO SISR", ICON.e6, false, true)}
     </div>
     <div class="mobile-menu__group">
