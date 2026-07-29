@@ -37,42 +37,28 @@
       color: var(--primary); margin-top: 2px;
     }
 
-    /* Styles des cartes de procédures (identiques à la deuxième image) */
-    .proc-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      margin-bottom: 28px;
-    }
-    .proc-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
-      border-color: var(--primary, #2563eb);
-    }
-    .proc-card__visual {
+    /* Style du visuel intégré en bas du bloc */
+    .card-visual-bottom {
       position: relative;
       width: 100%;
-      height: 200px;
+      height: 220px;
       background: var(--bg-secondary);
+      border-radius: 12px;
       overflow: hidden;
-      border-bottom: 1px solid var(--border-color);
+      margin-top: 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
     }
-    .proc-card__visual img {
+    .card-visual-bottom img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    .proc-card__overlay {
+    .card-visual-badge {
       position: absolute;
       top: 12px;
       left: 12px;
-    }
-    .proc-card__badge {
       background: rgba(15, 23, 42, 0.8);
       border: 1px solid var(--border-color);
       color: var(--primary);
@@ -83,16 +69,6 @@
       backdrop-filter: blur(4px);
       text-transform: uppercase;
       letter-spacing: 0.5px;
-    }
-    .proc-card__body {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-    .proc-card__icon {
-      font-size: 1.5rem;
-      margin-bottom: 12px;
     }
   </style>
 </head>
@@ -142,33 +118,36 @@
           </div>
         </div>
 
-        <!-- 1. PRÉPARATION DES POSTES CHERCHEURS (AVEC LE STYLE DE LA 2ÈME IMAGE) -->
-        <article class="proc-card">
-          <div class="proc-card__visual">
+        <!-- 1. PRÉPARATION DES POSTES CHERCHEURS (BLOC RICHE + IMAGE EN BAS + BOUTON) -->
+        <div class="rich-card">
+          <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            1. Préparation et configuration des postes pour les chercheurs
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+            Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement de travail immédiatement opérationnel et sécurisé au sein du laboratoire.
+          </p>
+          <ul class="mission-list-custom">
+            <li class="mission-item-custom">
+              <span class="mission-icon-bullet">✓</span>
+              <span><strong>Nettoyage & Bureautique :</strong> Suppression des logiciels pré-installés d'origine, déploiement d'Office (depuis le NAS du labo), Firefox, Thunderbird et du logiciel d'analyse scientifique Origin.</span>
+            </li>
+            <li class="mission-item-custom">
+              <span class="mission-icon-bullet">✓</span>
+              <span><strong>Sécurité & Sauvegarde :</strong> Activation de <strong>BitLocker</strong> pour le chiffrement des données, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>.</span>
+            </li>
+          </ul>
+
+          <!-- Visuel et bouton intégrés en bas dans le même bloc -->
+          <div class="card-visual-bottom">
             <img src="assets/images/procedures/procedure-preparation-postes.png" alt="Capture d'écran — procédure préparation postes chercheurs" loading="lazy">
-            <div class="proc-card__overlay"><span class="proc-card__badge">Stage CINaM</span></div>
+            <span class="card-visual-badge">Stage CINaM</span>
           </div>
-          <div class="proc-card__body">
-            <span class="proc-card__icon" aria-hidden="true">💻</span>
-            <h3 style="color: var(--text-main); margin-bottom: 12px; font-size: 1.2rem;">1. Préparation et configuration des postes pour les chercheurs</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-              Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement de travail immédiatement opérationnel et sécurisé au sein du laboratoire.
-            </p>
-            <ul class="mission-list-custom" style="margin-bottom: 24px;">
-              <li class="mission-item-custom">
-                <span class="mission-icon-bullet">✓</span>
-                <span><strong>Nettoyage & Bureautique :</strong> Suppression des logiciels pré-installés d'origine, déploiement d'Office (depuis le NAS du labo), Firefox, Thunderbird et du logiciel d'analyse scientifique Origin.</span>
-              </li>
-              <li class="mission-item-custom">
-                <span class="mission-icon-bullet">✓</span>
-                <span><strong>Sécurité & Sauvegarde :</strong> Activation de <strong>BitLocker</strong> pour le chiffrement des données, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>.</span>
-              </li>
-            </ul>
-            <div>
-              <a href="assets/pdf/procedure-preparation-postes.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF</a>
-            </div>
+
+          <div>
+            <a href="assets/pdf/procedure-preparation-postes.pdf" class="btn btn--primary btn--sm" download>Télécharger la procédure des postes chercheurs (PDF)</a>
           </div>
-        </article>
+        </div>
 
         <!-- 2. GPO & LAPS -->
         <div class="rich-card">
