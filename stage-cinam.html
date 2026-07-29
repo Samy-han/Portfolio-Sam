@@ -84,14 +84,14 @@
           </div>
         </div>
 
-        <!-- 1. PRÉPARATION DES POSTES CHERCHEURS & GPO / LAPS -->
+        <!-- 1. PRÉPARATION DES POSTES CHERCHEURS -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            1. Préparation, configuration des postes & Sécurisation par GPO / LAPS
+            1. Préparation et configuration des postes pour les chercheurs
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
-            Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement sécurisé, conforme aux exigences du CNRS et rattaché à l'Active Directory.
+            Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement de travail immédiatement opérationnel et sécurisé au sein du laboratoire.
           </p>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
@@ -100,24 +100,40 @@
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Sécurité & Sauvegarde :</strong> Activation de <strong>BitLocker</strong>, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>.</span>
+              <span><strong>Sécurité & Sauvegarde :</strong> Activation de <strong>BitLocker</strong> pour le chiffrement des données, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>.</span>
+            </li>
+          </ul>
+          <div style="margin-top: 20px;">
+            <a href="assets/pdf/procedure-preparation-postes.pdf" class="btn btn--primary btn--sm" download>Télécharger la procédure des postes chercheurs (PDF)</a>
+          </div>
+        </div>
+
+        <!-- 2. GPO & LAPS -->
+        <div class="rich-card">
+          <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            2. Sécurisation par GPO & Stratégie LAPS
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+            Mise en place de stratégies de groupe et de gestion centralisée des mots de passe administrateurs locaux pour verrouiller les postes contre les mauvaises manipulations tout en permettant la maintenance.
+          </p>
+          <ul class="mission-list-custom">
+            <li class="mission-item-custom">
+              <span class="mission-icon-bullet">✓</span>
+              <span><strong>GPO Restrictives :</strong> Interdiction d'accès à l'invite de commandes (<strong>CMD</strong>) et à divers outils système pour les utilisateurs standards afin de sécuriser l'intégrité de l'OS.</span>
             </li>
             <li class="mission-item-custom">
               <span class="mission-icon-bullet">✓</span>
-              <span><strong>Stratégies de groupe (GPO utilisateurs) :</strong> Mise en place de restrictions ciblées, notamment l'<strong>interdiction d'accès à l'invite de commandes (CMD)</strong> pour les utilisateurs standards afin d'empêcher toute manipulation non autorisée.</span>
-            </li>
-            <li class="mission-item-custom">
-              <span class="mission-icon-bullet">✓</span>
-              <span><strong>Gestion sécurisée des mots de passe (LAPS) :</strong> Configuration de la stratégie LAPS pour le compte administrateur local <code>install</code> (dédié aux chercheurs pour installer leurs mises à jour logicielles), générant automatiquement un <strong>nouveau mot de passe unique toutes les 4 heures</strong>.</span>
+              <span><strong>Stratégie LAPS :</strong> Configuration de LAPS pour le compte administrateur local <code>install</code> (utilisé par les chercheurs pour installer leurs mises à jour), automatisant la génération d'un <strong>nouveau mot de passe unique toutes les 4 heures</strong>.</span>
             </li>
           </ul>
         </div>
 
-        <!-- 2. REFONTE DES BAIES DE BRASSAGE ET INFRASTRUCTURE RÉSEAU -->
+        <!-- 3. REFONTE DES BAIES DE BRASSAGE ET INFRASTRUCTURE RÉSEAU -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            2. Refonte physique des baies de brassage et interconnexion campus
+            3. Refonte physique des baies de brassage et interconnexion campus
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
             Modernisation des armoires de communication pour fiabiliser le routage et optimiser le débit vers les nouveaux espaces.
@@ -134,11 +150,11 @@
           </ul>
         </div>
 
-        <!-- 3. PASSERELLES D'ACCÈS DISTANTS : TELEPORT & APACHE GUACAMOLE -->
+        <!-- 4. PASSERELLES D'ACCÈS DISTANTS : TELEPORT & APACHE GUACAMOLE -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13 12H3"/></svg>
-            3. Passerelles d'accès sécurisées (Teleport & Apache Guacamole)
+            4. Passerelles d'accès sécurisées (Teleport & Apache Guacamole)
           </h3>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
@@ -152,11 +168,11 @@
           </ul>
         </div>
 
-        <!-- 4. SUPERVISION : WAZUH -->
+        <!-- 5. SUPERVISION : WAZUH -->
         <div class="rich-card">
           <h3 style="color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            4. Supervision de la sécurité et règles custom sous Wazuh
+            5. Supervision de la sécurité et règles custom sous Wazuh
           </h3>
           <ul class="mission-list-custom">
             <li class="mission-item-custom">
