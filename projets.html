@@ -44,6 +44,35 @@
       border-radius: 8px; display: flex; align-items: center; justify-content: center;
       color: var(--primary); margin-top: 2px;
     }
+
+    /* Style du conteneur visuel intégré dans les cartes de procédures */
+    .card-visual-bottom {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+    }
+    .card-visual-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-color);
+      color: var(--primary);
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
   </style>
 </head>
 <body data-page="projets">
@@ -87,7 +116,7 @@
 
     <section class="section">
       <div class="container">
-        <!-- BARRE DE NAVIGATION INTERNE DES PROJETS (LISTE DÉFILANTE / ANCRAGES) -->
+        <!-- BARRE DE NAVIGATION INTERNE DES PROJETS -->
         <nav class="projets-nav" aria-label="Catégories de projets">
           <a href="#procedures" class="projets-nav__link projets-nav__link--active">
             <span aria-hidden="true">📋</span> Procédures
@@ -100,87 +129,97 @@
           </a>
         </nav>
 
-        <!-- SECTION 1 : PROCÉDURES -->
+        <!-- SECTION 1 : PROCÉDURES (UTILISANT LES RICH-CARDS HARMONISÉES) -->
         <div id="procedures" style="margin-bottom: 60px;">
           <p class="section__eyebrow">Documentation</p>
           <h2 class="section__title">Mes procédures</h2>
-          <p class="section__desc">Guides techniques rédigés en TP — chaque procédure est disponible en PDF.</p>
+          <p class="section__desc" style="margin-bottom: 32px;">Guides techniques rédigés en TP — chaque procédure est disponible en PDF.</p>
 
-          <div class="procs-grid">
-            <article class="proc-card">
-              <div class="proc-card__visual">
-                <img src="assets/images/procedures/procedure-glpi.webp" alt="Capture d'écran — procédure GLPI" loading="lazy">
-                <div class="proc-card__overlay"><span class="proc-card__badge">Supervision</span></div>
+          <div class="procedures-container">
+            <!-- 1. PROCÉDURE GLPI -->
+            <div class="rich-card">
+              <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
+                <span aria-hidden="true">📦</span> Procédure GLPI
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+                Installation, configuration et utilisation de GLPI pour l'inventaire et la gestion du parc informatique.
+              </p>
+              <div class="card-visual-bottom">
+                <span class="card-visual-badge">Supervision</span>
+                <img src="assets/images/procedures/procedure-glpi.webp" alt="Capture d'écran — procédure GLPI" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
               </div>
-              <div class="proc-card__body">
-                <span class="proc-card__icon" aria-hidden="true">📦</span>
-                <h3>Procédure GLPI</h3>
-                <p>Installation, configuration et utilisation de GLPI pour l'inventaire et la gestion du parc informatique.</p>
-                <div class="proc-card__actions">
-                  <a href="assets/pdf/procedure-glpi.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF</a>
-                </div>
+              <div>
+                <a href="assets/pdf/procedure-glpi.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF GLPI</a>
               </div>
-            </article>
+            </div>
 
-            <article class="proc-card">
-              <div class="proc-card__visual">
-                <img src="assets/images/procedures/procedure-active-directory.png" alt="Capture d'écran — procédure Active Directory" loading="lazy">
-                <div class="proc-card__overlay"><span class="proc-card__badge">Systèmes</span></div>
+            <!-- 2. PROCÉDURE ACTIVE DIRECTORY -->
+            <div class="rich-card">
+              <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
+                <span aria-hidden="true">👥</span> Procédure Active Directory
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+                Création d'utilisateurs, groupes, OUs et configuration des stratégies de base dans l'annuaire Active Directory.
+              </p>
+              <div class="card-visual-bottom">
+                <span class="card-visual-badge">Systèmes</span>
+                <img src="assets/images/procedures/procedure-active-directory.png" alt="Capture d'écran — procédure Active Directory" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
               </div>
-              <div class="proc-card__body">
-                <span class="proc-card__icon" aria-hidden="true">👥</span>
-                <h3>Procédure Active Directory</h3>
-                <p>Création d'utilisateurs, groupes, OUs et configuration des stratégies de base dans l'annuaire Active Directory.</p>
-                <div class="proc-card__actions">
-                  <a href="assets/pdf/procedure-active-directory.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF</a>
-                </div>
+              <div>
+                <a href="assets/pdf/procedure-active-directory.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF Active Directory</a>
               </div>
-            </article>
+            </div>
 
-            <article class="proc-card">
-              <div class="proc-card__visual">
-                <img src="assets/images/procedures/procedure-vlan-interco.png" alt="Capture d'écran — procédure VLAN interconnexion" loading="lazy">
-                <div class="proc-card__overlay"><span class="proc-card__badge">Réseaux</span></div>
+            <!-- 3. PROCÉDURE VLAN & INTERCONNEXION -->
+            <div class="rich-card">
+              <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
+                <span aria-hidden="true">🔀</span> Procédure VLAN &amp; interconnexion
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+                Segmentation réseau par VLAN, configuration des ports trunk et routage inter-VLAN entre switches.
+              </p>
+              <div class="card-visual-bottom">
+                <span class="card-visual-badge">Réseaux</span>
+                <img src="assets/images/procedures/procedure-vlan-interco.png" alt="Capture d'écran — procédure VLAN interconnexion" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
               </div>
-              <div class="proc-card__body">
-                <span class="proc-card__icon" aria-hidden="true">🔀</span>
-                <h3>Procédure VLAN &amp; interconnexion</h3>
-                <p>Segmentation réseau par VLAN, configuration des ports trunk et routage inter-VLAN entre switches.</p>
-                <div class="proc-card__actions">
-                  <a href="assets/pdf/procedure-vlan-interco.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF</a>
-                </div>
+              <div>
+                <a href="assets/pdf/procedure-vlan-interco.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF VLAN & interconnexion</a>
               </div>
-            </article>
+            </div>
 
-            <article class="proc-card">
-              <div class="proc-card__visual">
-                <img src="assets/images/procedures/procedure-gpo.png" alt="Capture d'écran — procédure GPO" loading="lazy">
-                <div class="proc-card__overlay"><span class="proc-card__badge">Systèmes</span></div>
+            <!-- 4. PROCÉDURE GPO -->
+            <div class="rich-card">
+              <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
+                <span aria-hidden="true">📋</span> Procédure GPO
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+                Création et déploiement de stratégies de groupe (GPO) pour centraliser la configuration des postes Windows.
+              </p>
+              <div class="card-visual-bottom">
+                <span class="card-visual-badge">Systèmes</span>
+                <img src="assets/images/procedures/procedure-gpo.png" alt="Capture d'écran — procédure GPO" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
               </div>
-              <div class="proc-card__body">
-                <span class="proc-card__icon" aria-hidden="true">📋</span>
-                <h3>Procédure GPO</h3>
-                <p>Création et déploiement de stratégies de groupe (GPO) pour centraliser la configuration des postes Windows.</p>
-                <div class="proc-card__actions">
-                  <a href="assets/pdf/procedure-gpo.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF</a>
-                </div>
+              <div>
+                <a href="assets/pdf/procedure-gpo.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF GPO</a>
               </div>
-            </article>
+            </div>
 
-            <article class="proc-card">
-              <div class="proc-card__visual">
-                <img src="assets/images/procedures/procedure-exchange.jpg" alt="Capture d'écran — procédure Microsoft Exchange" loading="lazy">
-                <div class="proc-card__overlay"><span class="proc-card__badge">Supervision</span></div>
+            <!-- 5. PROCÉDURE MICROSOFT EXCHANGE -->
+            <div class="rich-card">
+              <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
+                <span aria-hidden="true">📊</span> Procédure Microsoft Exchange
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+                Installation des rôles, configuration des domaines acceptés et création des boîtes aux lettres pour la messagerie d'entreprise.
+              </p>
+              <div class="card-visual-bottom">
+                <span class="card-visual-badge">Supervision</span>
+                <img src="assets/images/procedures/procedure-exchange.jpg" alt="Capture d'écran — procédure Microsoft Exchange" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
               </div>
-              <div class="proc-card__body">
-                <span class="proc-card__icon" aria-hidden="true">📊</span>
-                <h3>Procédure Microsoft Exchange</h3>
-                <p>Installation des rôles, configuration des domaines acceptés et création des boîtes aux lettres pour la messagerie d'entreprise.</p>
-                <div class="proc-card__actions">
-                  <a href="assets/pdf/procedure-Exchange.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF</a>
-                </div>
+              <div>
+                <a href="assets/pdf/procedure-Exchange.pdf" class="btn btn--primary btn--sm" download>Télécharger le PDF Exchange</a>
               </div>
-            </article>
+            </div>
           </div>
         </div>
 
