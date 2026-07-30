@@ -26,6 +26,30 @@
       box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
       border-color: var(--primary, #2563eb);
     }
+
+    /* Optimisations et ajustements responsive pour mobile */
+    @media (max-width: 768px) {
+      .profil-subnav__inner {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+      }
+      .profil-subnav__link {
+        display: inline-flex;
+        flex-shrink: 0;
+      }
+      .stage-card-hover > div {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+      .stage-card-hover img-container, 
+      .stage-card-hover div[style*="flex: 0 0 220px"] {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        height: 180px !important;
+      }
+    }
   </style>
 </head>
 <body data-page="profil">
