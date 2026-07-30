@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <!-- Point 1 avec l'encadré et les logos d'origine -->
+        <!-- Point 1 complet avec les textes exacts et les éléments visuels de ton image -->
         <article class="veille-card" style="margin-top: 32px;">
           <div class="veille-card__header">
             <span class="veille-card__icon" aria-hidden="true">
@@ -69,19 +69,19 @@
             Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement de travail immédiatement opérationnel et sécurisé au sein du laboratoire.
           </p>
           
-          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
-            <li><strong>Nettoyage &amp; Bureautique :</strong> Suppression des logiciels pré-installés d'origine, déploiement d'Office (depuis le NAS du labo), Firefox, Thunderbird et du logiciel d'analyse scientifique Origin.</li>
-            <li><strong>Sécurité &amp; Sauvegarde :</strong> Activation de <strong>BitLocker</strong> pour le chiffrement des données, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>.</li>
-          </ul>
+          <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <p><strong>Nettoyage &amp; Bureautique :</strong> Suppression des logiciels pré-installés d'origine, déploiement d'Office (depuis le NAS du labo), Firefox, Thunderbird et du logiciel d'analyse scientifique Origin.</p>
+            <p><strong>Sécurité &amp; Sauvegarde :</strong> Activation de <strong>BitLocker</strong> pour le chiffrement des données, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>.</p>
+          </div>
 
-          <!-- Encadré visuel avec badge et logos CNRS / CINaM -->
-          <div style="background: rgba(18, 24, 36, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 24px; margin-top: 24px; text-align: center; position: relative;">
+          <!-- Encadré interne avec le badge STAGE CINAM et les logos -->
+          <div style="background: rgba(18, 24, 36, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 24px; margin-top: 24px; text-align: center;">
             <div style="display: inline-block; background: rgba(0, 240, 255, 0.1); color: var(--accent, #00f0ff); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.5px;">
               STAGE CINAM
             </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap;">
-              <img src="assets/images/cnrs.png" alt="Logo CNRS" style="max-height: 50px; width: auto; object-fit: contain;">
-              <img src="assets/images/cinam.png" alt="Logo CINaM" style="max-height: 50px; width: auto; object-fit: contain;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+              <img src="assets/images/cnrs.png" alt="Logo CNRS" style="max-height: 45px; width: auto; object-fit: contain;">
+              <img src="assets/images/cinam.png" alt="Logo CINaM" style="max-height: 45px; width: auto; object-fit: contain;">
             </div>
           </div>
 
@@ -103,10 +103,10 @@
           <p>
             Mise en place de stratégies de groupe et de gestion centralisée des mots de passe administrateurs locaux pour verrouiller les postes contre les mauvaises manipulations tout en permettant la maintenance.
           </p>
-          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
-            <li><strong>GPO Restrictives :</strong> Interdiction d'accès à l'invite de commandes (CMD) et à divers outils système pour les utilisateurs standards afin de sécuriser l'intégrité de l'OS.</li>
-            <li><strong>Stratégie LAPS :</strong> Configuration de LAPS pour le compte administrateur local <code>install</code> (utilisé par les chercheurs pour installer leurs mises à jour), automatisant la génération d'un <strong>nouveau mot de passe unique toutes les 4 heures</strong>.</li>
-          </ul>
+          <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <p><strong>GPO Restrictives :</strong> Interdiction d'accès à l'invite de commandes (CMD) et à divers outils système pour les utilisateurs standards afin de sécuriser l'intégrité de l'OS.</p>
+            <p><strong>Stratégie LAPS :</strong> Configuration de LAPS pour le compte administrateur local <code>install</code> (utilisé par les chercheurs pour installer leurs mises à jour), automatisant la génération d'un <strong>nouveau mot de passe unique toutes les 4 heures</strong>.</p>
+          </div>
           <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">GPO</span>
             <span class="veille-card__tag">LAPS</span>
@@ -125,10 +125,10 @@
           <p>
             Modernisation des armoires de communication pour fiabiliser le routage et optimiser le débit vers les nouveaux espaces.
           </p>
-          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
-            <li><strong>Brassage et câblage structuré :</strong> Nettoyage des armoires, remplacement des jarretières usagées et organisation rigoureuse des cordons cuivre/fibre.</li>
-            <li><strong>Switches Aruba &amp; HPE Comware :</strong> Configuration des équipements d'accès et structuration des VLANs par département.</li>
-          </ul>
+          <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <p><strong>Brassage et câblage structuré :</strong> Nettoyage des armoires, remplacement des jarretières usagées et organisation rigoureuse des cordons cuivre/fibre.</p>
+            <p><strong>Switches Aruba &amp; HPE Comware :</strong> Configuration des équipements d'accès et structuration des VLANs par département.</p>
+          </div>
           <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">Réseau</span>
             <span class="veille-card__tag">Brassage</span>
@@ -147,10 +147,10 @@
           <p>
             Mise en place de solutions d'accès à distance hautement sécurisées pour le personnel habilité.
           </p>
-          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
-            <li><strong>Teleport :</strong> Centralisation et sécurisation des connexions SSH distantes aux serveurs et grappes de calcul.</li>
-            <li><strong>Apache Guacamole :</strong> Déploiement de la passerelle web pour le contrôle à distance des postes de laboratoire et des microscopes en RDP sécurisé.</li>
-          </ul>
+          <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <p><strong>Teleport :</strong> Centralisation et sécurisation des connexions SSH distantes aux serveurs et grappes de calcul.</p>
+            <p><strong>Apache Guacamole :</strong> Déploiement de la passerelle web pour le contrôle à distance des postes de laboratoire et des microscopes en RDP sécurisé.</p>
+          </div>
           <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">Teleport</span>
             <span class="veille-card__tag">Guacamole</span>
@@ -169,10 +169,10 @@
           <p>
             Mise en place d'une surveillance proactive des journaux d'événements et détection des anomalies sur le parc informatique.
           </p>
-          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
-            <li><strong>Agents Wazuh :</strong> Déploiement massif sur les postes clients et serveurs du laboratoire pour collecter les logs en temps réel.</li>
-            <li><strong>Règles personnalisées :</strong> Création d'alertes spécifiques pour détecter les élévations de privilèges suspectes ou les connexions en dehors des horaires habituels.</li>
-          </ul>
+          <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <p><strong>Agents Wazuh :</strong> Déploiement massif sur les postes clients et serveurs du laboratoire pour collecter les logs en temps réel.</p>
+            <p><strong>Règles personnalisées :</strong> Création d'alertes spécifiques pour détecter les élévations de privilèges suspectes ou les connexions en dehors des horaires habituels.</p>
+          </div>
           <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">Wazuh</span>
             <span class="veille-card__tag">SIEM</span>
