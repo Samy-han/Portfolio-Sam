@@ -2,11 +2,62 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="refresh" content="0;url=a-propos-moi.html">
   <title>Redirection — Profil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: var(--bg-main, #0f172a);
+      color: var(--text-main, #f8fafc);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .redirect-box {
+      background: var(--bg-card, #1e293b);
+      border: 1px solid var(--border-color, #334155);
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .redirect-box p {
+      margin-bottom: 20px;
+      color: var(--text-muted, #94a3b8);
+      font-size: 0.95rem;
+    }
+    .redirect-box a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--primary, #2563eb);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .redirect-box a:hover {
+      background: var(--primary-dark, #1d4ed8);
+    }
+  </style>
   <script>window.location.replace("a-propos-moi.html");</script>
 </head>
 <body>
-  <p><a href="a-propos-moi.html">Aller à À propos de moi</a></p>
+  <div class="redirect-box">
+    <p>Redirection vers la page À propos de moi...</p>
+    <a href="a-propos-moi.html">Aller à À propos de moi</a>
+  </div>
 </body>
 </html>
