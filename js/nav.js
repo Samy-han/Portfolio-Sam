@@ -172,23 +172,32 @@ function renderMobileNav(container, active) {
       <p class="mobile-menu__group-title"><span class="profil-icon profil-icon--title" aria-hidden="true">${ICON.expPro}</span>Expériences professionnelles</p>
       ${mobileLink("experiences-pro.html#stages", "Expériences de stages", ICON.stages, false, true)}
     </div>
+  `;
+
+  // Ajout dynamique et propre de TCS et Formation
+  const tcsItem = NAV_ITEMS.find((n) => n.id === "tcs");
+  if (tcsItem) {
+    container.innerHTML += mobileLink(tcsItem.href, tcsItem.label, tcsItem.icon, active === "tcs", false);
+  }
+
+  const formationItem = NAV_ITEMS.find((n) => n.id === "formation");
+  if (formationItem) {
+    container.innerHTML += mobileLink(formationItem.href, formationItem.label, formationItem.icon, active === "formation", false);
+  }
+
+  container.innerHTML += `
     <div class="mobile-menu__group">
       <p class="mobile-menu__group-title"><span class="profil-icon profil-icon--title" aria-hidden="true">${ICON.travaux}</span>Projets</p>
-      ${mobileLink("projets.html#procedures", "Mes procédures — Procédures techniques détaillées", ICON.procedures, false, true)}
-      ${mobileLink("projets.html#projet-e5", "Projet E5 — Dossier de stage CINaM CNRS", ICON.e5, false, true)}
-      ${mobileLink("projets.html#projet-e6", "Projet E6 — Fin de formation BTS SIO SISR", ICON.e6, false, true)}
+      ${mobileLink("projets.html#procedures", "Mes procédures", ICON.procedures, false, true)}
+      ${mobileLink("projets.html#projet-e5", "Projet E5 (CINaM CNRS)", ICON.e5, false, true)}
+      ${mobileLink("projets.html#projet-e6", "Projet E6 (BTS SIO)", ICON.e6, false, true)}
     </div>
     <div class="mobile-menu__group">
       <p class="mobile-menu__group-title"><span class="profil-icon profil-icon--title" aria-hidden="true">${ICON.veille}</span>Veille</p>
-      ${mobileLink("veilles.html#veille-tech", "Veille technologique — Windows Server", ICON.veilleTech, false, true)}
-      ${mobileLink("veilles.html#veille-juridique", "Veille juridique — RGPD", ICON.veilleJur, false, true)}
+      ${mobileLink("veilles.html#veille-tech", "Veille technologique", ICON.veilleTech, false, true)}
+      ${mobileLink("veilles.html#veille-juridique", "Veille juridique", ICON.veilleJur, false, true)}
     </div>
   `;
-
-  ["tcs", "formation"].forEach((id) => {
-    const item = NAV_ITEMS.find((n) => n.id === id);
-    container.innerHTML += mobileLink(item.href, item.label, item.icon, active === id, false);
-  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
