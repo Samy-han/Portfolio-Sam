@@ -52,6 +52,28 @@
       object-fit: contain !important;
       background: var(--bg-secondary);
     }
+
+    /* Optimisations et ajustements responsive pour mobile */
+    @media (max-width: 768px) {
+      .projets-nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+        display: flex;
+        gap: 12px;
+      }
+      .projets-nav__link {
+        display: inline-flex;
+        flex-shrink: 0;
+      }
+      .rich-card {
+        padding: 20px;
+      }
+      .grid-duo {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body data-page="projets">
@@ -205,7 +227,6 @@
               </div>
             </article>
 
-            <!-- NOUVELLE PROCÉDURE : ZABBIX -->
             <article class="proc-card">
               <div class="proc-card__visual">
                 <img src="assets/images/procedures/procedure-zabbix.jpg" alt="Capture d'écran — procédure Zabbix" loading="lazy">
@@ -224,7 +245,6 @@
               </div>
             </article>
 
-            <!-- NOUVELLE PROCÉDURE : GUACAMOLE -->
             <article class="proc-card">
               <div class="proc-card__visual">
                 <img src="assets/images/procedures/procedure-guacamole.png" alt="Capture d'écran — procédure Apache Guacamole" loading="lazy">
@@ -243,7 +263,6 @@
               </div>
             </article>
 
-            <!-- NOUVELLE PROCÉDURE : WAZUH -->
             <article class="proc-card">
               <div class="proc-card__visual">
                 <img src="assets/images/procedures/procedure-wazuh.png" alt="Capture d'écran — procédure Wazuh" loading="lazy">
@@ -336,7 +355,7 @@
   </main>
 
   <script src="js/config.js"></script>
-  <script src="js/nav.js"></script>
+  <script src="js/nav.ins"></script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
 </body>
