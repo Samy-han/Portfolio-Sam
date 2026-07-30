@@ -1,8 +1,8 @@
-/* ===== Palette Samy — ardoise + teal / violet ===== */
+/* ===== Palette Samy — ardoise + teal / violet (Unifiée) ===== */
 :root {
   --bg: #1a1a22;
   --bg-card: rgba(45, 45, 58, 0.82);
-  --bg-elevated: rgba(36, 36, 48, 0.65);
+  --bg-elevated: #1a1a22; /* Unifié pour supprimer les différences de blocs */
   --border: rgba(255, 255, 255, 0.09);
   --text: #fafafa;
   --text-muted: #a8a8b8;
@@ -304,109 +304,11 @@ img { max-width: 100%; display: block; }
 
 .menu-toggle {
   display: none;
-  flex-direction: column;
-  gap: 5px;
-  margin-left: auto;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
 }
 
-.menu-toggle span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  border-radius: 2px;
-}
-
-/* ===== Menu mobile ===== */
+/* Menu mobile masqué car on garde l'affichage PC global */
 .mobile-menu {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: var(--bg);
-  padding: 24px;
-  transform: translateX(100%);
-  transition: transform 0.35s ease;
-}
-
-.mobile-menu.is-open { transform: translateX(0); }
-
-.mobile-menu__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 28px;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.mobile-menu__close {
-  background: none;
-  border: none;
-  color: var(--text);
-  font-size: 2rem;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.mobile-menu__nav {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.mobile-menu__link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 16px;
-  border-radius: var(--radius);
-  font-weight: 600;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  transition: var(--ease);
-}
-
-.mobile-menu__link--active,
-.mobile-menu__link:hover {
-  color: var(--accent);
-  border-color: rgba(45, 212, 191, 0.35);
-  background: var(--accent-dim);
-}
-
-.mobile-menu__group {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.mobile-menu__group-title {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  padding: 0 16px 8px;
-}
-
-.mobile-menu__sublink {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px 10px 20px;
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  transition: var(--ease);
-}
-
-.mobile-menu__sublink:hover,
-.mobile-menu__sublink--active {
-  color: var(--accent);
-  background: var(--accent-dim);
+  display: none;
 }
 
 /* ===== Buttons ===== */
@@ -654,7 +556,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 40px;
 }
 
-/* Tools — 3 colonnes × 2 lignes */
+/* Tools */
 .tools { background: var(--bg-elevated); }
 
 .tools__grid {
@@ -1467,30 +1369,6 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .profil-hub__grid { grid-template-columns: 1fr; }
-  .competences-grid { grid-template-columns: 1fr; }
-  .cv-box .btn { margin-left: 0; width: 100%; justify-content: center; }
-  .hero__layout { grid-template-columns: 1fr; }
-  .hero__visual { order: -1; justify-content: center; }
-  .hero__image-frame { max-width: 100%; }
-  .hero__stats { grid-template-columns: repeat(2, 1fr); }
-  .tools__grid { grid-template-columns: repeat(2, 1fr); }
-  .env__grid { grid-template-columns: repeat(2, 1fr); }
-  .shortcuts__grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 768px) {
-  .nav { display: none; }
-  .menu-toggle { display: flex; }
-  .hero { padding-top: 28px; }
-  .section { padding: 56px 0; }
-  .tools__grid { grid-template-columns: 1fr; }
-  .env__grid { grid-template-columns: 1fr; }
-  .banner__inner { padding: 32px 24px; }
-}
-
 /* ===== Animations ===== */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -1570,7 +1448,6 @@ img { max-width: 100%; display: block; }
   animation: float 3.2s ease-in-out infinite, iconPulse 2.4s ease-in-out infinite;
 }
 
-/* Marque décorative (comme le logo) */
 .mark-dot {
   display: block;
   width: 9px;
@@ -1993,7 +1870,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.55;
 }
 
-/* Cartes formation style compétences (icônes fixes) */
+/* Cartes formation style compétences */
 .formation-skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2503,21 +2380,4 @@ img { max-width: 100%; display: block; }
 .veille-resources a:hover {
   border-color: var(--accent);
   background: var(--accent-dim);
-}
-
-@media (max-width: 900px) {
-  .skills-grid,
-  .tcs-objectifs--animated,
-  .comps-grid,
-  .debouches-row,
-  .formation-hero__grid,
-  .formation-cards,
-  .formation-pillars,
-  .formation-skills,
-  .procs-grid,
-  .veilles-grid,
-  .veille-detail,
-  .page-hero__wrap,
-  .e6-card { grid-template-columns: 1fr; }
-  .page-hero__media { display: none; }
 }
