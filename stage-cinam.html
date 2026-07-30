@@ -56,33 +56,36 @@
           </div>
         </div>
 
-        <!-- Point 1 avec images / éléments visuels -->
+        <!-- Point 1 avec l'encadré et les logos d'origine -->
         <article class="veille-card" style="margin-top: 32px;">
           <div class="veille-card__header">
-            <span class="veille-card__icon" aria-hidden="true">🖥️</span>
-            <span class="veille-card__date">Stage CINaM</span>
+            <span class="veille-card__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </span>
+            <span class="veille-card__date" style="color: var(--accent, #00f0ff); font-weight: 600;">Stage CINaM</span>
           </div>
           <h3>1. Préparation et configuration des postes pour les chercheurs</h3>
           <p>
             Standardisation globale des stations de travail livrées aux chercheurs, garantissant un environnement de travail immédiatement opérationnel et sécurisé au sein du laboratoire.
           </p>
-          <ul style="margin-top: 12px; padding-left: 20px;">
-            <li style="margin-bottom: 8px;"><strong>Nettoyage &amp; Bureautique :</strong> Suppression des logiciels pré-installés d'origine, déploiement d'Office (depuis le NAS du labo), Firefox, Thunderbird et du logiciel d'analyse scientifique Origin.</li>
+          
+          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <li><strong>Nettoyage &amp; Bureautique :</strong> Suppression des logiciels pré-installés d'origine, déploiement d'Office (depuis le NAS du labo), Firefox, Thunderbird et du logiciel d'analyse scientifique Origin.</li>
             <li><strong>Sécurité &amp; Sauvegarde :</strong> Activation de <strong>BitLocker</strong> pour le chiffrement des données, intégration de l'agent de sauvegarde <strong>Attempo Lina</strong> et de l'antivirus <strong>WithSecure</strong>.</li>
           </ul>
-          
-          <!-- Visuels / Logos d'origine du Point 1 -->
-          <div style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 24px; flex-wrap: wrap;">
-            <div style="background: var(--bg-card, #121824); padding: 16px; border-radius: 12px; border: 1px solid var(--border-color, rgba(255,255,255,0.08)); text-align: center;">
-              <span class="badge" style="display: inline-block; margin-bottom: 12px; font-size: 11px; padding: 4px 10px; background: rgba(0, 240, 255, 0.1); color: var(--accent, #00f0ff); border-radius: 20px; font-weight: 600;">STAGE CINAM</span>
-              <div style="display: flex; gap: 16px; justify-content: center; align-items: center;">
-                <img src="assets/images/cnrs.png" alt="Logo CNRS" style="height: 60px; object-fit: contain;">
-                <img src="assets/images/cinam.png" alt="Logo CINaM" style="height: 60px; object-fit: contain;">
-              </div>
+
+          <!-- Encadré visuel avec badge et logos CNRS / CINaM -->
+          <div style="background: rgba(18, 24, 36, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 24px; margin-top: 24px; text-align: center; position: relative;">
+            <div style="display: inline-block; background: rgba(0, 240, 255, 0.1); color: var(--accent, #00f0ff); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.5px;">
+              STAGE CINAM
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap;">
+              <img src="assets/images/cnrs.png" alt="Logo CNRS" style="max-height: 50px; width: auto; object-fit: contain;">
+              <img src="assets/images/cinam.png" alt="Logo CINaM" style="max-height: 50px; width: auto; object-fit: contain;">
             </div>
           </div>
 
-          <div class="veille-card__tags" style="margin-top: 16px;">
+          <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">Stage CINaM</span>
             <span class="veille-card__tag">CNRS</span>
             <span class="veille-card__tag">Déploiement</span>
@@ -94,17 +97,17 @@
         <article class="veille-card" style="margin-top: 24px;">
           <div class="veille-card__header">
             <span class="veille-card__icon" aria-hidden="true">🔒</span>
-            <span class="veille-card__date">Stage CINaM</span>
+            <span class="veille-card__date" style="color: var(--accent, #00f0ff); font-weight: 600;">Stage CINaM</span>
           </div>
           <h3>2. Sécurisation des postes et gestion des privilèges</h3>
           <p>
             Mise en place de stratégies de groupe et de gestion centralisée des mots de passe administrateurs locaux pour verrouiller les postes contre les mauvaises manipulations tout en permettant la maintenance.
           </p>
-          <ul style="margin-top: 12px; padding-left: 20px;">
-            <li style="margin-bottom: 8px;"><strong>GPO Restrictives :</strong> Interdiction d'accès à l'invite de commandes (CMD) et à divers outils système pour les utilisateurs standards afin de sécuriser l'intégrité de l'OS.</li>
+          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <li><strong>GPO Restrictives :</strong> Interdiction d'accès à l'invite de commandes (CMD) et à divers outils système pour les utilisateurs standards afin de sécuriser l'intégrité de l'OS.</li>
             <li><strong>Stratégie LAPS :</strong> Configuration de LAPS pour le compte administrateur local <code>install</code> (utilisé par les chercheurs pour installer leurs mises à jour), automatisant la génération d'un <strong>nouveau mot de passe unique toutes les 4 heures</strong>.</li>
           </ul>
-          <div class="veille-card__tags" style="margin-top: 16px;">
+          <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">GPO</span>
             <span class="veille-card__tag">LAPS</span>
             <span class="veille-card__tag">Active Directory</span>
@@ -116,17 +119,17 @@
         <article class="veille-card" style="margin-top: 24px;">
           <div class="veille-card__header">
             <span class="veille-card__icon" aria-hidden="true">🔌</span>
-            <span class="veille-card__date">Stage CINaM</span>
+            <span class="veille-card__date" style="color: var(--accent, #00f0ff); font-weight: 600;">Stage CINaM</span>
           </div>
           <h3>3. Refonte physique des baies de brassage et interconnexion campus</h3>
           <p>
             Modernisation des armoires de communication pour fiabiliser le routage et optimiser le débit vers les nouveaux espaces.
           </p>
-          <ul style="margin-top: 12px; padding-left: 20px;">
-            <li style="margin-bottom: 8px;"><strong>Brassage et câblage structuré :</strong> Nettoyage des armoires, remplacement des jarretières usagées et organisation rigoureuse des cordons cuivre/fibre.</li>
+          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <li><strong>Brassage et câblage structuré :</strong> Nettoyage des armoires, remplacement des jarretières usagées et organisation rigoureuse des cordons cuivre/fibre.</li>
             <li><strong>Switches Aruba &amp; HPE Comware :</strong> Configuration des équipements d'accès et structuration des VLANs par département.</li>
           </ul>
-          <div class="veille-card__tags" style="margin-top: 16px;">
+          <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">Réseau</span>
             <span class="veille-card__tag">Brassage</span>
             <span class="veille-card__tag">Aruba</span>
@@ -138,17 +141,17 @@
         <article class="veille-card" style="margin-top: 24px;">
           <div class="veille-card__header">
             <span class="veille-card__icon" aria-hidden="true">🌐</span>
-            <span class="veille-card__date">Stage CINaM</span>
+            <span class="veille-card__date" style="color: var(--accent, #00f0ff); font-weight: 600;">Stage CINaM</span>
           </div>
           <h3>4. Passerelles d'accès sécurisées (Teleport &amp; Apache Guacamole)</h3>
           <p>
             Mise en place de solutions d'accès à distance hautement sécurisées pour le personnel habilité.
           </p>
-          <ul style="margin-top: 12px; padding-left: 20px;">
-            <li style="margin-bottom: 8px;"><strong>Teleport :</strong> Centralisation et sécurisation des connexions SSH distantes aux serveurs et grappes de calcul.</li>
+          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <li><strong>Teleport :</strong> Centralisation et sécurisation des connexions SSH distantes aux serveurs et grappes de calcul.</li>
             <li><strong>Apache Guacamole :</strong> Déploiement de la passerelle web pour le contrôle à distance des postes de laboratoire et des microscopes en RDP sécurisé.</li>
           </ul>
-          <div class="veille-card__tags" style="margin-top: 16px;">
+          <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">Teleport</span>
             <span class="veille-card__tag">Guacamole</span>
             <span class="veille-card__tag">Passerelle</span>
@@ -160,17 +163,17 @@
         <article class="veille-card" style="margin-top: 24px;">
           <div class="veille-card__header">
             <span class="veille-card__icon" aria-hidden="true">🛡️</span>
-            <span class="veille-card__date">Stage CINaM</span>
+            <span class="veille-card__date" style="color: var(--accent, #00f0ff); font-weight: 600;">Stage CINaM</span>
           </div>
           <h3>5. Supervision de la sécurité et règles custom sous Wazuh</h3>
           <p>
             Mise en place d'une surveillance proactive des journaux d'événements et détection des anomalies sur le parc informatique.
           </p>
-          <ul style="margin-top: 12px; padding-left: 20px;">
-            <li style="margin-bottom: 8px;"><strong>Agents Wazuh :</strong> Déploiement massif sur les postes clients et serveurs du laboratoire pour collecter les logs en temps réel.</li>
+          <ul style="margin-top: 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <li><strong>Agents Wazuh :</strong> Déploiement massif sur les postes clients et serveurs du laboratoire pour collecter les logs en temps réel.</li>
             <li><strong>Règles personnalisées :</strong> Création d'alertes spécifiques pour détecter les élévations de privilèges suspectes ou les connexions en dehors des horaires habituels.</li>
           </ul>
-          <div class="veille-card__tags" style="margin-top: 16px;">
+          <div class="veille-card__tags" style="margin-top: 20px;">
             <span class="veille-card__tag">Wazuh</span>
             <span class="veille-card__tag">SIEM</span>
             <span class="veille-card__tag">Supervision</span>
