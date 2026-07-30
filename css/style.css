@@ -1,4 +1,4 @@
-/* ===== Palette Samy — ardoise + teal / violet (Navigation & DA Intactes) ===== */
+/* ===== Palette Samy — ardoise + teal / violet (DA Préservée & Mobile Fluide) ===== */
 :root {
   --bg: #1a1a22;
   --bg-card: rgba(45, 45, 58, 0.82);
@@ -52,7 +52,7 @@ img { max-width: 100%; display: block; height: auto; }
   margin-inline: auto;
 }
 
-/* ===== Header & Menu Principal Restauré ===== */
+/* ===== Header & Navigation ===== */
 .header {
   position: sticky;
   top: 0;
@@ -68,40 +68,40 @@ img { max-width: 100%; display: block; height: auto; }
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  gap: 12px;
+  gap: 16px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   flex-shrink: 0;
 }
 
 .logo__mark {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 2px;
   background: var(--accent);
   box-shadow: 0 0 10px var(--accent-glow);
   transform: rotate(45deg);
 }
 
-/* Le menu principal (Accueil, Profil, TCS, Formation, Projets, Veille) défilable horizontalement sur mobile pour ne jamais disparaître */
+/* On garde la navigation visible et accessible en scroll horizontal discret sur mobile pour ne pas perdre le menu */
 .nav {
   display: flex;
   overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  max-width: 70vw;
+  scrollbar-width: none; /* Firefox */
 }
-.nav::-webkit-scrollbar { display: none; }
+.nav::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
 
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   white-space: nowrap;
 }
 
@@ -111,7 +111,7 @@ img { max-width: 100%; display: block; height: auto; }
   gap: 6px;
   padding: 6px 10px;
   border-radius: 8px;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-muted);
   transition: var(--ease);
@@ -137,18 +137,6 @@ img { max-width: 100%; display: block; height: auto; }
 /* Dropdown Profil */
 .nav__dropdown {
   position: relative;
-}
-
-.nav__dropdown > .nav__link::after {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  margin-left: 4px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: rotate(45deg) translateY(-2px);
-  opacity: 0.6;
 }
 
 .nav__submenu {
@@ -188,8 +176,8 @@ img { max-width: 100%; display: block; height: auto; }
   border-radius: 8px;
 }
 .nav__submenu-link:hover { background: var(--accent-dim); }
-.nav__submenu-link strong { font-size: 0.82rem; color: var(--text); display: block; }
-.nav__submenu-link span { font-size: 0.72rem; color: var(--text-muted); }
+.nav__submenu-link strong { font-size: 0.85rem; color: var(--text); display: block; }
+.nav__submenu-link span { font-size: 0.75rem; color: var(--text-muted); }
 
 .menu-toggle { display: none; }
 .mobile-menu { display: none; }
@@ -221,7 +209,7 @@ img { max-width: 100%; display: block; height: auto; }
   background: rgba(255, 255, 255, 0.04);
 }
 
-/* ===== Hero Principal ===== */
+/* ===== Hero principal (Conserve le layout PC côte à côte) ===== */
 .hero { padding: 32px 0 0; }
 
 .hero__layout {
@@ -343,7 +331,7 @@ img { max-width: 100%; display: block; height: auto; }
   text-transform: uppercase;
 }
 
-/* ===== Sections & Grilles (DA PC Préservée) ===== */
+/* ===== Sections & Grilles (Style Bureau préservé) ===== */
 .section { padding: 48px 0; }
 
 .section__eyebrow {
@@ -366,6 +354,7 @@ img { max-width: 100%; display: block; height: auto; }
   font-size: 0.9rem;
 }
 
+/* Les grilles conservent leur structure multi-colonnes d'origine */
 .tools__grid,
 .shortcuts__grid,
 .env__grid,
@@ -428,12 +417,13 @@ img { max-width: 100%; display: block; height: auto; }
   border-radius: var(--radius-lg);
 }
 
-/* Media Queries douces pour mobile */
+/* Ajustement subtil pour les très petits écrans afin de garder l'esprit compact sans tout casser */
 @media (max-width: 768px) {
   .hero__layout {
     grid-template-columns: 1fr;
   }
   
+  /* Au lieu de passer bêtement en colonne verticale, on garde les cartes compactes ou sur 2 colonnes */
   .tools__grid,
   .shortcuts__grid,
   .env__grid,
