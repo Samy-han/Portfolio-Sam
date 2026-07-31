@@ -28,7 +28,7 @@ body {
   color: var(--text);
   line-height: 1.65;
   min-height: 100vh;
-  overflow-x: hidden; /* Empêche tout défilement horizontal indésirable */
+  overflow-x: hidden;
 }
 
 body::before {
@@ -240,13 +240,13 @@ img { max-width: 100%; display: block; }
   line-height: 1.4;
 }
 
-/* Bouton menu hamburger (masqué sur PC, visible sur mobile) */
+/* Bouton Menu Hamburger (caché sur PC, affiché sur mobile) */
 .menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 22px;
+  height: 21px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -256,7 +256,7 @@ img { max-width: 100%; display: block; }
 .menu-toggle span {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: var(--text);
   border-radius: 2px;
   transition: var(--ease);
@@ -339,8 +339,8 @@ img { max-width: 100%; display: block; }
 
 .hero__layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.1fr 0.9fr; /* Conserve le format côte à côte fixe */
+  gap: 32px;
   align-items: center;
   padding-bottom: 48px;
   border-bottom: 1px solid var(--border);
@@ -517,31 +517,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.06em;
 }
 
-/* ===== Sections & Grilles Générales ===== */
-.section { padding: 72px 0; }
-
-.section__eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 8px;
-}
-
-.section__title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.section__desc {
-  color: var(--text-muted);
-  max-width: 600px;
-  margin-bottom: 40px;
-}
-
-/* Tools */
+/* ===== Grilles de base ===== */
 .tools { background: var(--bg-elevated); }
 .tools__grid, .shortcuts__grid, .env__grid, .comps-grid, .debouches-row, .formation-pillars, .formation-skills, .procs-grid, .veilles-grid, .skills-grid, .profil-hub__grid {
   display: grid;
@@ -564,49 +540,14 @@ img { max-width: 100%; display: block; }
   transition: var(--ease);
 }
 
-.tool-card:hover, .shortcut-card:hover, .env-card:hover, .skill-card:hover, .formation-card:hover, .formation-skill:hover, .proc-card:hover, .veille-card:hover {
-  border-color: rgba(45, 212, 191, 0.4);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Banner */
-.banner { padding: 0 0 48px; }
-.banner__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 48px 40px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-}
-
-/* ===== MEDIA QUERIES RESPONSIVE (MOBILE & TABLETTE) ===== */
-@media (max-width: 1024px) {
-  .hero__layout, .page-hero__wrap, .formation-hero__grid, .veille-detail, .e6-card {
-    grid-template-columns: 1fr;
-  }
-  .hero__visual, .page-hero__media {
-    justify-content: center;
-  }
-  .tools__grid, .shortcuts__grid, .env__grid, .comps-grid, .debouches-row, .formation-pillars {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .hero__stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
+/* ===== MENU MOBILE & ADAPTATION ECRAN ===== */
+@media (max-width: 900px) {
   .menu-toggle {
-    display: flex; /* Affiche le bouton hamburger sur mobile */
+    display: flex; /* Active le bouton hamburger sur mobile */
   }
-  
+
   .nav {
-    display: none; /* Masque le menu classique par défaut sur mobile */
+    display: none; /* Cache la barre de navigation de base */
     position: absolute;
     top: var(--header-h);
     left: 0;
@@ -615,10 +556,12 @@ img { max-width: 100%; display: block; }
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
 
+  /* Classe déclenchée par JS pour afficher le menu */
   .nav.is-active {
-    display: block; /* S'affiche quand on clique sur le hamburger (via JS) */
+    display: block; 
   }
 
   .nav__list {
@@ -628,14 +571,11 @@ img { max-width: 100%; display: block; }
   }
 
   .hero__title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
+  /* Gestion des grilles en dessous pour éviter les gros blocs */
   .tools__grid, .shortcuts__grid, .env__grid, .comps-grid, .debouches-row, .formation-pillars, .formation-skills, .procs-grid, .veilles-grid, .skills-grid, .profil-hub__grid, .hero__stats {
     grid-template-columns: 1fr;
-  }
-
-  .banner__inner {
-    padding: 24px;
   }
 }
