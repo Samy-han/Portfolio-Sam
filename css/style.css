@@ -29,7 +29,7 @@ body {
   line-height: 1.65;
   min-height: 100vh;
   width: 100%;
-  overflow-x: hidden; /* Empêche strictement le défilement horizontal intempestif */
+  overflow-x: hidden; /* Empêche le défilement horizontal intempestif */
 }
 
 body::before {
@@ -575,7 +575,7 @@ img { max-width: 100%; display: block; }
 
 .tools__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -632,7 +632,7 @@ img { max-width: 100%; display: block; }
 /* Shortcuts */
 .shortcuts__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -698,7 +698,7 @@ img { max-width: 100%; display: block; }
 
 .env__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -781,7 +781,7 @@ img { max-width: 100%; display: block; }
   gap: 12px;
 }
 
-/* ===== Adaptation responsive par blocs stables (Sans dézoom, sans scroll horizontal) ===== */
+/* ===== Adaptation responsive par blocs distincts et aérés (Sans effet dézoom, lecture naturelle par section) ===== */
 @media screen and (max-width: 1024px) {
   .hero__layout {
     grid-template-columns: 1fr;
@@ -795,28 +795,47 @@ img { max-width: 100%; display: block; }
   }
   .tools__grid,
   .shortcuts__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
   .env__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hero__title {
-    font-size: 2.5rem;
+  /* Espacement généreux entre les sections pour séparer chaque bloc clairement sur mobile */
+  .section {
+    padding: 56px 0;
   }
+
+  .hero {
+    padding: 32px 0 40px;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+    line-height: 1.15;
+  }
+
   .hero__stats {
     grid-template-columns: 1fr;
+    gap: 1px;
   }
+
+  /* Transformation en piles verticales bien distinctes (un bloc après l'autre, lisible sans zoomer) */
   .tools__grid,
   .shortcuts__grid,
   .env__grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+
   .banner__inner {
     padding: 32px 20px;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   .header__inner {
     justify-content: space-between;
   }
