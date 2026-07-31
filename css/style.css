@@ -28,7 +28,7 @@ body {
   color: var(--text);
   line-height: 1.65;
   min-height: 100vh;
-  overflow-x: hidden; /* Empêche le défilement horizontal sur mobile */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 body::before {
@@ -93,7 +93,7 @@ img { max-width: 100%; display: block; }
 
 .nav {
   margin-left: auto;
-  display: block !important;
+  display: block;
 }
 
 .nav__list {
@@ -136,7 +136,7 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
 }
 
-/* Menu déroulant Profil */
+/* Menu déroulant Profil (Corrigé pour éviter le texte qui dépasse) */
 .nav__dropdown {
   position: relative;
 }
@@ -175,8 +175,7 @@ img { max-width: 100%; display: block; }
 .nav__submenu--profil {
   display: flex;
   flex-direction: column;
-  min-width: 300px;
-  max-width: 360px;
+  width: 280px;
   padding: 8px;
   background: rgba(32, 32, 42, 0.98);
   border: 1px solid var(--border);
@@ -240,7 +239,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.8rem;
   color: var(--text-muted);
   line-height: 1.4;
-  white-space: nowrap;
+  white-space: normal; /* Autorise le retour à la ligne pour ne pas dépasser */
 }
 
 /* Icônes profil */
@@ -277,43 +276,9 @@ img { max-width: 100%; display: block; }
   border-radius: 14px;
 }
 
-.mobile-menu__group-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.mobile-menu__sublink {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.profil-section__head {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  margin-bottom: 28px;
-}
-
-.profil-section__head .section__title {
-  margin-bottom: 0;
-}
-
-.profil-section__head .profil-section__subtitle {
-  margin-bottom: 6px;
-}
-
+/* Bouton Burger et Menu Mobile (Masqués par défaut sur PC) */
 .menu-toggle {
-  display: none !important;
-}
-
-.mobile-menu span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  border-radius: 2px;
+  display: none;
 }
 
 .mobile-menu {
@@ -2378,9 +2343,69 @@ img { max-width: 100%; display: block; }
   background: var(--accent-dim);
 }
 
-/* ===== Adaptation mobile proportionnelle (ajoutée ici) ===== */
+/* ===== Adaptation Mobile Propre, Lisible & Menu Burger ===== */
 @media screen and (max-width: 768px) {
-  body {
-    zoom: 0.32; /* Ajuste à 0.30 si tu veux un tout petit peu plus petit, ou 0.35 si tu veux un peu plus grand */
+  /* Agrandissement de l'affichage mobile pour une lecture confortable */
+  html {
+    font-size: 18px;
+  }
+
+  /* Adaptation des conteneurs sur mobile */
+  .container, .header .container {
+    width: 100% !important;
+    padding-inline: 16px;
+  }
+
+  /* Masquage de la nav classique PC et affichage du bouton burger */
+  .header .nav {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 101;
+  }
+
+  /* Style du menu mobile burger */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 34, 0.98);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    gap: 12px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.5);
+  }
+
+  /* Passage des grilles en une seule colonne sur mobile pour tout empiler verticalement de façon propre */
+  .hero__layout, .page-hero__wrap, .formation-hero__grid, .e6-card, .veille-detail {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .tools__grid, .shortcuts__grid, .env__grid, .competences-grid, .profil-hub__grid, .comps-grid, .procs-grid, .veilles-grid, .formation-cards, .formation-pillars, .formation-skills {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Titres adaptés pour éviter qu'ils ne soient trop grands sur mobile */
+  .hero__title {
+    font-size: 2.2rem !important;
+  }
+
+  .section__title {
+    font-size: 1.8rem !important;
   }
 }
