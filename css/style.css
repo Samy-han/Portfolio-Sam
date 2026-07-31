@@ -29,7 +29,7 @@ body {
   line-height: 1.65;
   min-height: 100vh;
   width: 100%;
-  overflow-x: hidden; /* Empêche le défilement horizontal intempestif */
+  overflow-x: hidden;
 }
 
 body::before {
@@ -781,7 +781,7 @@ img { max-width: 100%; display: block; }
   gap: 12px;
 }
 
-/* ===== Adaptation responsive par blocs distincts et aérés (Sans effet dézoom, lecture naturelle par section) ===== */
+/* ===== Adaptation responsive : Défilement 100% vertical, empilement propre des cartes, zéro dézoom horizontal ===== */
 @media screen and (max-width: 1024px) {
   .hero__layout {
     grid-template-columns: 1fr;
@@ -803,40 +803,34 @@ img { max-width: 100%; display: block; }
 }
 
 @media screen and (max-width: 768px) {
-  /* Espacement généreux entre les sections pour séparer chaque bloc clairement sur mobile */
-  .section {
-    padding: 56px 0;
-  }
-
-  .hero {
-    padding: 32px 0 40px;
+  /* Structure globale strictement verticale : 1 seule colonne partout, zéro scroll horizontal */
+  .hero__stats,
+  .tools__grid,
+  .shortcuts__grid,
+  .env__grid {
+    grid-template-columns: 1fr !important;
   }
 
   .hero__title {
     font-size: 2.2rem;
-    line-height: 1.15;
   }
 
-  .hero__stats {
-    grid-template-columns: 1fr;
-    gap: 1px;
-  }
-
-  /* Transformation en piles verticales bien distinctes (un bloc après l'autre, lisible sans zoomer) */
-  .tools__grid,
-  .shortcuts__grid,
-  .env__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .section {
+    padding: 48px 0;
   }
 
   .banner__inner {
-    padding: 32px 20px;
+    padding: 24px 16px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
-  .header__inner {
-    justify-content: space-between;
+  /* Les cartes s'affichent proprement les unes sous les autres en pleine largeur de container */
+  .tool-card,
+  .shortcut-card,
+  .env-card,
+  .stat {
+    width: 100%;
   }
 }
+```[cite: 3]
