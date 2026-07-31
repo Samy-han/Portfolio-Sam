@@ -28,8 +28,7 @@ body {
   color: var(--text);
   line-height: 1.65;
   min-height: 100vh;
-  min-width: 1280px; /* Force l'affichage bureau sur mobile */
-  overflow-x: auto;  /* Permet le défilement horizontal fluide */
+  overflow-x: hidden; /* Empêche le défilement horizontal sur mobile */
 }
 
 body::before {
@@ -94,7 +93,7 @@ img { max-width: 100%; display: block; }
 
 .nav {
   margin-left: auto;
-  display: block !important; /* Force l'affichage de la nav sur mobile */
+  display: block !important;
 }
 
 .nav__list {
@@ -306,7 +305,7 @@ img { max-width: 100%; display: block; }
 }
 
 .menu-toggle {
-  display: none !important; /* Désactive le bouton hamburger */
+  display: none !important;
 }
 
 .mobile-menu span {
@@ -317,7 +316,6 @@ img { max-width: 100%; display: block; }
   border-radius: 2px;
 }
 
-/* ===== Menu mobile (masqué car affichage PC forcé) ===== */
 .mobile-menu {
   display: none;
 }
@@ -567,7 +565,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 40px;
 }
 
-/* Tools — 3 colonnes × 2 lignes */
+/* Tools */
 .tools { background: var(--bg-elevated); }
 
 .tools__grid {
@@ -975,7 +973,7 @@ img { max-width: 100%; display: block; }
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 
-/* Timeline parcours */
+/* Timeline */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -1459,7 +1457,6 @@ img { max-width: 100%; display: block; }
   animation: float 3.2s ease-in-out infinite, iconPulse 2.4s ease-in-out infinite;
 }
 
-/* Marque décorative (comme le logo) */
 .mark-dot {
   display: block;
   width: 9px;
@@ -1471,7 +1468,6 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-/* Hero pages internes */
 .page-hero--visual {
   padding-bottom: 40px;
   overflow: hidden;
@@ -1582,7 +1578,6 @@ img { max-width: 100%; display: block; }
   width: var(--level, 70%);
 }
 
-/* Certif animée */
 .cert-card--animated {
   position: relative;
   overflow: hidden;
@@ -1608,7 +1603,6 @@ img { max-width: 100%; display: block; }
   animation: ringSpin 12s linear infinite;
 }
 
-/* Timeline enrichie */
 .timeline__item p + p {
   margin-top: 8px;
   font-size: 0.88rem;
@@ -1634,7 +1628,6 @@ img { max-width: 100%; display: block; }
   left: -36px;
 }
 
-/* TCS objectifs animés */
 .tcs-objectifs--animated {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -1674,7 +1667,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.5;
 }
 
-/* TCS compétences cartes */
 .comps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1708,7 +1700,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.4;
 }
 
-/* Débouchés 3 + 3 */
 .debouches-rows {
   display: flex;
   flex-direction: column;
@@ -1753,7 +1744,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.5;
 }
 
-/* Stage animé */
 .stage-card--animated {
   transition: transform var(--ease), border-color var(--ease);
 }
@@ -1767,7 +1757,6 @@ img { max-width: 100%; display: block; }
   animation-duration: 4s;
 }
 
-/* Formation BTS */
 .formation-hero {
   padding: 48px 0 40px;
   border-bottom: 1px solid var(--border);
@@ -1882,7 +1871,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.55;
 }
 
-/* Cartes formation style compétences (icônes fixes) */
 .formation-skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1962,7 +1950,6 @@ img { max-width: 100%; display: block; }
   background: var(--gradient);
 }
 
-/* Déroulé — onglets cliquables */
 .formation-steps {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -2070,7 +2057,6 @@ img { max-width: 100%; display: block; }
   border-radius: 6px;
 }
 
-/* Projets */
 .projets-nav {
   display: flex;
   flex-wrap: wrap;
@@ -2191,7 +2177,6 @@ img { max-width: 100%; display: block; }
   font-size: 0.85rem;
 }
 
-/* Projet E6 */
 .e6-card {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -2230,7 +2215,6 @@ img { max-width: 100%; display: block; }
   margin-bottom: 12px;
 }
 
-/* Veilles */
 .veilles-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2392,4 +2376,11 @@ img { max-width: 100%; display: block; }
 .veille-resources a:hover {
   border-color: var(--accent);
   background: var(--accent-dim);
+}
+
+/* ===== Adaptation mobile proportionnelle (ajoutée ici) ===== */
+@media screen and (max-width: 768px) {
+  body {
+    zoom: 0.32; /* Ajuste à 0.30 si tu veux un tout petit peu plus petit, ou 0.35 si tu veux un peu plus grand */
+  }
 }
